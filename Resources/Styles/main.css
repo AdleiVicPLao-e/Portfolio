@@ -1,14 +1,16 @@
 :root {
-  /* Duck yellow color range */
-  --duck-dark-yellow: #b8860b;   /* dark golden yellow */
-  --duck-yellow: #ffb400;        /* classic duck yellow */
-  --duck-light-yellow: #ffe066;  /* light yellow */
-  --duck-cream-yellow: #fff8dc;  /* very pale yellow, like duck down */
+  /* 🎨 Duck + Accent Colors */
+  --kobi: #E88EC8;             /* soft magenta accent */
+  --little-girl-pink: #F2BEE0; /* pale pink accent */
+  --blond: #FFF7B6;            /* very light yellow */
+  --lemon-yellow: #FFF554;     /* bright lemon yellow */
+  --sunglow: #FFCA34;          /* rich golden yellow */
 
-  /* Text colors */
-  --text-dark: #000000;          /* black */
-  --text-light: #ffffff;         /* white */
+  /* Text */
+  --text-dark: #000000;
+  --text-light: #ffffff;
 
+  /* Navbar */
   --navbar-height: 70px;
 }
 
@@ -18,13 +20,13 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: var(--duck-cream-yellow);
+  background-color: var(--blond); /* light yellow */
   color: var(--text-dark);
 }
 
 /* Navbar */
 nav {
-  background: var(--duck-dark-yellow);
+  background: var(--sunglow); /* strong yellow */
   padding: 1em;
   position: fixed;
   top: 0;
@@ -35,17 +37,17 @@ nav {
 }
 
 nav a {
-  color: var(--text-light);
+  color: var(--text-dark);
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--duck-light-yellow);
+  color: var(--kobi); /* magenta accent */
 }
 
-/* Main Content */
+/* Main */
 main {
   padding-top: var(--navbar-height);
 }
@@ -53,17 +55,17 @@ main {
 section {
   min-height: 100vh;
   padding: 100px 20px 20px;
-  background: var(--duck-cream-yellow);
+  background: var(--blond);
   color: var(--text-dark);
+  border-bottom: 2px solid var(--lemon-yellow); /* subtle section divider */
 }
 
 /* Footer */
 footer {
-  background-color: var(--duck-dark-yellow);
-  color: var(--text-light);
+  background-color: var(--lemon-yellow);
+  color: var(--text-dark);
   text-align: center;
   padding: 1em;
-  position: static; 
   width: 100%;
 }
 
@@ -72,29 +74,29 @@ footer {
 /* ========================= */
 @media (max-width: 767px) {
   body {
-    background-color: var(--duck-dark-yellow);
-    color: var(--text-light);
-  }
-
-  nav {
-    background: var(--duck-yellow);
-  }
-
-  nav a {
+    background-color: var(--sunglow); /* deeper yellow */
     color: var(--text-dark);
   }
 
+  nav {
+    background: var(--kobi); /* magenta navbar */
+  }
+
+  nav a {
+    color: var(--text-light);
+  }
+
   nav a:hover {
-    color: var(--duck-light-yellow);
+    color: var(--little-girl-pink); /* softer hover */
   }
 
   section {
-    background: var(--duck-dark-yellow);
+    background: var(--sunglow);
     color: var(--text-light);
   }
 
   footer {
-    background: var(--duck-yellow);
-    color: var(--text-dark);
+    background: var(--kobi);
+    color: var(--text-light);
   }
 }
