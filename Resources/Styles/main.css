@@ -22,6 +22,7 @@ body {
   scroll-behavior: smooth;
   background-color: var(--blond); /* light yellow */
   color: var(--text-dark);
+  scroll-margin-top: var(--navbar-height);
 }
 
 /* Navbar */
