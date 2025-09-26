@@ -4,6 +4,7 @@
   --gray: #777;
   --light-gray: #ddd;
   --white: #fff;
+  --navbar-height: 70px;
 }
 
 body {
@@ -35,6 +36,10 @@ nav a {
 
 nav a:hover {
   color: var(--light-gray);
+}
+
+main {
+    padding-top: var(--navbar-height);
 }
 
 section {
