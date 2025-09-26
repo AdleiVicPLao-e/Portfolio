@@ -1,23 +1,26 @@
 :root {
-  --black: #000;
-  --dark-gray: #333;
-  --gray: #777;
-  --light-gray: #ddd;
-  --white: #fff;
+  --duck-green: #154734;
+  --duck-brown: #6B4226;
+  --duck-yellow: #FFB400;
+  --duck-cream: #F4EAD5;
+  --white: #FFFFFF;
+  --black: #000000;
   --navbar-height: 70px;
 }
 
+/* Base (desktop-first, light background) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--duck-cream);
+  color: var(--duck-brown);
 }
 
+/* Navbar */
 nav {
-  background: var(--dark-gray);
+  background: var(--duck-green);
   padding: 1em;
   position: fixed;
   top: 0;
@@ -29,32 +32,65 @@ nav {
 
 nav a {
   color: var(--white);
-  margin-right: 20px;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--light-gray);
+  color: var(--duck-yellow);
 }
 
+/* Main Content */
 main {
-    padding-top: var(--navbar-height);
+  padding-top: var(--navbar-height);
 }
 
 section {
   min-height: 100vh;
   padding: 100px 20px 20px;
-  background: var(--white);
-  color: var(--black);
+  background: var(--duck-cream);
+  color: var(--duck-brown);
 }
 
+/* Footer */
 footer {
-  background-color: var(--dark-gray);
+  background-color: var(--duck-green);
   color: var(--white);
   text-align: center;
   padding: 1em;
   position: static;
   width: 100%;
-  bottom: 0;
+}
+
+/* ========================= */
+/* 📱 Mobile Dark Theme Flip */
+/* ========================= */
+@media (max-width: 767px) {
+  body {
+    background-color: var(--duck-green);
+    color: var(--duck-cream);
+  }
+
+  nav {
+    background: var(--duck-brown);
+  }
+
+  nav a {
+    color: var(--duck-yellow);
+  }
+
+  nav a:hover {
+    color: var(--duck-cream);
+  }
+
+  section {
+    background: var(--duck-green);
+    color: var(--duck-cream);
+  }
+
+  footer {
+    background: var(--duck-brown);
+    color: var(--duck-cream);
+  }
 }
