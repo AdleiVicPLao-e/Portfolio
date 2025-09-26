@@ -1,4 +1,5 @@
-.gallery {
-  background: #ddd;
-  color: #000;
+
+#gallery {
+  background: var(--dark-gray);
+  color: var(--white);
 }
