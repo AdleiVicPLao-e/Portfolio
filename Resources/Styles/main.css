@@ -1,26 +1,30 @@
 :root {
-  --duck-green: #154734;
-  --duck-brown: #6B4226;
-  --duck-yellow: #FFB400;
-  --duck-cream: #F4EAD5;
-  --white: #FFFFFF;
-  --black: #000000;
+  /* Duck yellow color range */
+  --duck-dark-yellow: #b8860b;   /* dark golden yellow */
+  --duck-yellow: #ffb400;        /* classic duck yellow */
+  --duck-light-yellow: #ffe066;  /* light yellow */
+  --duck-cream-yellow: #fff8dc;  /* very pale yellow, like duck down */
+
+  /* Text colors */
+  --text-dark: #000000;          /* black */
+  --text-light: #ffffff;         /* white */
+
   --navbar-height: 70px;
 }
 
-/* Base (desktop-first, light background) */
+/* Base (desktop-first) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: var(--duck-cream);
-  color: var(--duck-brown);
+  background-color: var(--duck-cream-yellow);
+  color: var(--text-dark);
 }
 
 /* Navbar */
 nav {
-  background: var(--duck-green);
+  background: var(--duck-dark-yellow);
   padding: 1em;
   position: fixed;
   top: 0;
@@ -31,14 +35,14 @@ nav {
 }
 
 nav a {
-  color: var(--white);
+  color: var(--text-light);
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--duck-yellow);
+  color: var(--duck-light-yellow);
 }
 
 /* Main Content */
@@ -49,17 +53,17 @@ main {
 section {
   min-height: 100vh;
   padding: 100px 20px 20px;
-  background: var(--duck-cream);
-  color: var(--duck-brown);
+  background: var(--duck-cream-yellow);
+  color: var(--text-dark);
 }
 
 /* Footer */
 footer {
-  background-color: var(--duck-green);
-  color: var(--white);
+  background-color: var(--duck-dark-yellow);
+  color: var(--text-light);
   text-align: center;
   padding: 1em;
-  position: static;
+  position: static; 
   width: 100%;
 }
 
@@ -68,29 +72,29 @@ footer {
 /* ========================= */
 @media (max-width: 767px) {
   body {
-    background-color: var(--duck-green);
-    color: var(--duck-cream);
+    background-color: var(--duck-dark-yellow);
+    color: var(--text-light);
   }
 
   nav {
-    background: var(--duck-brown);
+    background: var(--duck-yellow);
   }
 
   nav a {
-    color: var(--duck-yellow);
+    color: var(--text-dark);
   }
 
   nav a:hover {
-    color: var(--duck-cream);
+    color: var(--duck-light-yellow);
   }
 
   section {
-    background: var(--duck-green);
-    color: var(--duck-cream);
+    background: var(--duck-dark-yellow);
+    color: var(--text-light);
   }
 
   footer {
-    background: var(--duck-brown);
-    color: var(--duck-cream);
+    background: var(--duck-yellow);
+    color: var(--text-dark);
   }
 }
