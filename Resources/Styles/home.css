@@ -1,35 +1,67 @@
-/* Home Section with background image */
+/* Home Section */
 .home-section {
-  min-height: 100vh;
+  padding: 20px;
+  padding-top: var(--navbar-height);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: var(--white);
+  background: linear-gradient(to bottom, var(--white), var(--light-gray));
 }
 
-/* Overlay for readability */
+/* Overlay for style (optional) */
 .home-section::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: var(--sunglow);
+  background: rgba(0,0,0,0.05); /* subtle shadow overlay */
   z-index: 0;
 }
 
 .home-text {
   position: relative;
-  z-index: 1; /* ensures text appears above overlay */
-  max-width: 700px;
+  z-index: 1;
+  max-width: 800px;
   text-align: center;
 }
 
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* makes it a circle */
+  border: 4px solid var(--white);
+  object-fit: cover;
+  background-color: var(--white); /* ensures no dark edges */
+  display: block;
+}
+
+/* Headings */
 .home-text h1 {
-  font-size: 3rem;
-  color: var(--sunglow); /* bright yellow headline */
+  font-size: 2.5rem;
+  color: var(--dark-gray); /* main heading in dark gray */
+}
+
+.home-text h2 {
+  font-size: 1.3rem;
+  color: var(--gray); /* softer gray */
+  font-weight: 500;
 }
 
 .home-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--black); /* body text strong black */
+}
+
+/* Buttons */
+.home-text .btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: var(--dark-gray);
+  color: var(--white);
+  border: none;
+}
+
+.home-text .btn:hover {
+  background: var(--black);
   color: var(--white);
 }

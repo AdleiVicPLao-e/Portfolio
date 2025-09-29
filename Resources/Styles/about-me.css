@@ -1,0 +1,48 @@
+/* About Me Section */
+.about-section {
+  padding: 60px 20px;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Headings */
+.about-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--dark-gray);
+}
+
+/* Paragraphs */
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;   /* ✨ extra line spacing for readability */
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+/* Optional: emphasize key words */
+.about-content strong {
+  color: var(--dark-gray);
+}
+
+/* Lists (if you use them) */
+.about-content ul {
+  margin: 20px 0;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.about-content li {
+  margin-bottom: 10px;
+  color: var(--gray);
+  font-size: 1rem;
+}

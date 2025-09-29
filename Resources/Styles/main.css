@@ -1,14 +1,10 @@
 :root {
-  /* 🎨 Duck + Accent Colors */
-  --kobi: #E88EC8;             /* soft magenta accent */
-  --little-girl-pink: #F2BEE0; /* pale pink accent */
-  --blond: #FFF7B6;            /* very light yellow */
-  --lemon-yellow: #FFF554;     /* bright lemon yellow */
-  --sunglow: #FFCA34;          /* rich golden yellow */
-
-  /* Text */
-  --text-dark: #000000;
-  --text-light: #ffffff;
+  /* 🎨 Grayscale Palette */
+  --white: #ffffff;       /* pure white */
+  --light-gray: #f5f5f5;  /* very light gray */
+  --gray: #cccccc;        /* medium gray */
+  --dark-gray: #333333;   /* dark gray */
+  --black: #000000;       /* pure black */
 
   /* Navbar */
   --navbar-height: 70px;
@@ -20,12 +16,13 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: var(--blond); /* light yellow */
+  background-color: var(--light-gray);
+  color: var(--dark-gray);  
 }
 
 /* Navbar */
 nav {
-  background: var(--sunglow); /* strong yellow */
+  background: linear-gradient(to top, var(--gray), var(--white));
   padding: 1em;
   position: fixed;
   top: 0;
@@ -36,28 +33,29 @@ nav {
 }
 
 nav a {
-  color: var(--text-dark);
+  color: var(--white);
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--kobi); /* magenta accent */
+  color: var(--light-gray);
 }
 
-section {
+section { 
   scroll-margin-top: var(--navbar-height);
   min-height: 100vh;
   padding: 20px 20px 20px;
-  background: var(--blond);
-  border-bottom: 2px solid var(--lemon-yellow);
+  background: var(--white);
+  border-bottom: 2px solid var(--gray);
+  color: var(--black);
 }
 
 /* Footer */
 footer {
-  background-color: var(--lemon-yellow);
-  color: var(--text-dark);
+  background-color: var(--dark-gray);
+  color: var(--white);
   text-align: center;
   padding: 1em;
   width: 100%;
@@ -68,29 +66,29 @@ footer {
 /* ========================= */
 @media (max-width: 767px) {
   body {
-    background-color: var(--sunglow); /* deeper yellow */
-    color: var(--text-dark);
+    background-color: var(--black);
+    color: var(--white);
   }
 
   nav {
-    background: var(--kobi); /* magenta navbar */
+    background: var(--gray);
   }
 
   nav a {
-    color: var(--text-light);
+    color: var(--black);
   }
 
   nav a:hover {
-    color: var(--little-girl-pink); /* softer hover */
+    color: var(--white);
   }
 
   section {
-    background: var(--sunglow);
-    color: var(--text-dark);
+    background: var(--black);
+    color: var(--white);
   }
 
   footer {
-    background: var(--kobi);
-    color: var(--text-light);
+    background: var(--gray);
+    color: var(--black);
   }
 }
