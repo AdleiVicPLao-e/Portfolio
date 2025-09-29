@@ -1,33 +1,72 @@
 <template id="about-me-template">
-<section class="section-content about-section text-center p-4">
-  <div class="container">
-    <h2 class="fw-bold mb-3">About Me</h2>
-    <p class="lead">
-      Hi! I’m <strong>Adlei Vic P. Lao-e</strong>, a passionate and driven 
-      <strong>Information Technology graduate from Saint Louis University</strong> 
-      with a strong foundation in software development, data analysis, and web technologies. 
-      As a <strong>DOST JLSS Merit Scholar</strong> and <strong>Cum Laude</strong>, I take pride in 
-      my dedication to learning and excellence.
-    </p>
-    <p>
-      My expertise spans <strong>Java, JavaScript, HTML, CSS, Python, MySQL, and R</strong>, with hands-on 
-      experience in <strong>frontend and backend development</strong>, 
-      <strong>API integration</strong>, and <strong>data visualization</strong>. 
-      I’ve contributed to real-world projects such as developing digital solutions at <strong>Kaisipan, Inc.</strong>, 
-      creating an <strong>AR-driven PWA for the SLU Museum of Igorot Culture</strong>, 
-      and leading various <strong>academic and technical projects</strong>.
-    </p>
-    <p>
-      Beyond coding, I value <strong>leadership, communication, and creativity</strong>. 
-      I’ve honed these skills through <strong>student leadership roles, public speaking, 
-      and artistic pursuits like poetry</strong>. I’m also deeply interested in how 
-      technology and innovation can solve problems and make a meaningful impact.
-    </p>
-    <p>
-      My goal is to grow as a <strong>developer and problem solver</strong> while contributing 
-      to projects that combine technical excellence with purpose. 
-      I’m excited to connect, collaborate, and continue learning in the ever-evolving tech landscape.
-    </p>
-  </div>
-</section>
+  <section class="about-section p-4">
+    <div class="about-layout">
+
+      <!-- Row 1: Skills -->
+      <div class="skills-row">
+        
+
+        <div class="skills-block">
+            <h3 class="section-title">SKILLS</h3>
+          <!-- Icons -->
+          <div class="skills-icons">
+            <div class="skill-item"><img src="./Resources/Assets/Images/java.png" alt="Java"><span>Java</span></div>
+            <div class="skill-item"><img src="./Resources/Assets/Images/javascript.png" alt="JavaScript"><span>JavaScript</span></div>
+            <div class="skill-item"><img src="./Resources/Assets/Images/html.png" alt="HTML"><span>HTML</span></div>
+            <div class="skill-item"><img src="./Resources/Assets/Images/css.png" alt="CSS"><span>CSS</span></div>
+            <div class="skill-item"><img src="./Resources/Assets/Images/python.png" alt="Python"><span>Python</span></div>
+          </div>
+
+          <!-- Categories -->
+          <div class="skills-table">
+            <div class="skills-cell">
+              <h4 class="skills-subtitle">Big Data</h4>
+              <div class="skills-items">MySQL<br>R<br>Spreadsheet</div>
+            </div>
+            <div class="skills-cell">
+              <h4 class="skills-subtitle">Interpersonal</h4>
+              <div class="skills-items">Leadership<br>Public Speaking</div>
+            </div>
+            <div class="skills-cell">
+              <h4 class="skills-subtitle">Art</h4>
+              <div class="skills-items">Poetry</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Three equal columns -->
+      <div class="about-row">
+        <!-- Column 1: Grad Pic -->
+        <div class="about-col text-center">
+          <img src="./Resources/Assets/Images/grad-pic.jpg" alt="grad-pic" class="grad-pic">
+        </div>
+
+        <!-- Column 2: Education -->
+        <div class="about-col">
+          <h3 class="section-title">EDUCATION</h3>
+          <p>B.S. in Information Technology – Saint Louis University (2025)<br>
+          <strong>DOST JLSS Merit Scholar</strong> | <strong>Cum Laude</strong></p>
+
+          <h3 class="section-title">ACHIEVEMENTS</h3>
+          <ul class="achievements-list">
+            <li>Philippine Startup Challenge 8 – Top 20</li>
+            <li>Trend Micro CTF – Top 30 Finalist</li>
+            <li>6× Dean’s List</li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Extracurricular -->
+        <div class="about-col">
+          <h3 class="section-title">EXTRACURRICULAR</h3>
+          <ul>
+            <li>The Mountain Collegian & ICON Magazine contributor</li>
+            <li>1st Place – Essay Writing Competition (2020)</li>
+            <li>2nd Runner Up – Judo Intramurals (2023)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
 </template>

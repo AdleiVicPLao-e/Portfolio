@@ -1,94 +1,102 @@
 :root {
-  /* 🎨 Grayscale Palette */
-  --white: #ffffff;       /* pure white */
-  --light-gray: #f5f5f5;  /* very light gray */
-  --gray: #cccccc;        /* medium gray */
-  --dark-gray: #333333;   /* dark gray */
-  --black: #000000;       /* pure black */
-
-  /* Navbar */
-  --navbar-height: 70px;
+    --white: #ffffff;
+    --light-gray: #c0bfbf;
+    --gray: #8f8e8e;
+    --dark-gray: #333333;
+    --black: #000000;
+    --navbar-height: 65px;
 }
 
-/* Base (desktop-first) */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  background-color: var(--light-gray);
-  color: var(--dark-gray);  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+    background-color: var(--light-gray);
+    cursor:default;
+    min-height: 100vh;
+    color: var(--dark-gray);
 }
 
-/* Navbar */
 nav {
-  background: linear-gradient(to top, var(--gray), var(--white));
-  padding: 1em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  text-align: center;
+    background: linear-gradient(to top, var(--light-gray), var(--gray));
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
 }
 
 nav a {
-  color: var(--white);
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
+    color: var(--white);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 
-section { 
-  scroll-margin-top: var(--navbar-height);
-  min-height: 100vh;
-  padding: 20px 20px 20px;
-  background: var(--white);
-  border-bottom: 2px solid var(--gray);
-  color: var(--black);
+section {
+    scroll-margin-top: var(--navbar-height);
+    background: var(--light-gray);
+    color: var(--black);
+    min-height: 100vh;
 }
 
-/* Footer */
 footer {
-  background-color: var(--dark-gray);
-  color: var(--white);
-  text-align: center;
-  padding: 1em;
-  width: 100%;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 1em;
+    width: 100%;
 }
 
-/* ========================= */
-/* 📱 Mobile Dark Theme Flip */
-/* ========================= */
 @media (max-width: 767px) {
-  body {
-    background-color: var(--black);
-    color: var(--white);
-  }
+    :root {
+        --white: #ffffff;
+        --light-gray: #111111;
+        --gray: #222222;
+        --dark-gray: #111111;
+        --black: #000000;
+    }
 
-  nav {
-    background: var(--gray);
-  }
+    body {
+        background-color: var(--black) !important;
+        color: var(--white) !important;
+    }
 
-  nav a {
-    color: var(--black);
-  }
+    nav {
+        background: linear-gradient(to top, var(--black), var(--gray)) !important;
+    }
 
-  nav a:hover {
-    color: var(--white);
-  }
+    .navbar-toggler-icon {
+        filter: invert(100%);
+    }
 
-  section {
-    background: var(--black);
-    color: var(--white);
-  }
+    nav a {
+        color: var(--white) !important;
+    }
 
-  footer {
-    background: var(--gray);
-    color: var(--black);
-  }
+    nav a:hover {
+        color: var(--light-gray) !important;
+    }
+
+    section {
+        background: var(--black) !important;
+        color: var(--white) !important;
+    }
+
+    footer {
+        background: var(--gray) !important;
+        color: var(--white) !important;
+    }
+
+    * {
+        background-color: transparent;
+        color: inherit;
+    }
 }

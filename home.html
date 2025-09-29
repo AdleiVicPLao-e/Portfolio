@@ -1,10 +1,13 @@
 <template id="home-template">
-  <section class="section-content home-section d-flex flex-column align-items-center justify-content-center text-center">
-    
+  <section class="section-content home-section">
+
     <!-- Profile Image -->
-    <img src="./Resources/Assets/Images/front-page-face.jpg" 
-         alt="Adlei Vic P. Lao-e" 
-         class="profile-pic my-3">
+    <div class="profile-container">
+      <div class="coin">
+        <img src="./Resources/Assets/Images/front-page-face.jpg" alt="Heads" class="front">
+        <img src="./Resources/Assets/Images/tails.png" alt="Tails" class="back">
+      </div>
+    </div>
 
     <!-- Intro Text -->
     <div class="home-text p-3">
@@ -16,13 +19,13 @@
 
       <!-- Call-to-Action Buttons -->
       <div class="mt-4">
-        <a href="./Resources/Assets/Resume/Adlei-Resume.pdf" class="btn btn-warning fw-bold mx-2" target="_blank">
+        <button type="button" class="btn btn-warning fw-bold mx-2" id="download-resume">
           📄 Download My Resume
-        </a>
-        <a href="#contact" class="btn btn-dark fw-bold mx-2">
+        </button>
+        <a href="#contacts" class="btn btn-dark fw-bold mx-2">
           ✉️ Contact Me
         </a>
-        <a href="#about-me" class="btn btn-outline-dark fw-bold mx-2">
+        <a href="#aboutMe" class="btn btn-outline-dark fw-bold mx-2">
           💼 Learn More About Me
         </a>
       </div>

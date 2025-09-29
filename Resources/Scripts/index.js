@@ -1,4 +1,3 @@
-// Map sections to their files
 const sections = {
   home: { html: "home.html", css: "./Resources/Styles/home.css", js: "./Resources/Scripts/home.js" },
   aboutMe: { html: "about-me.html", css: "./Resources/Styles/about-me.css", js: "./Resources/Scripts/about-me.js" },
@@ -7,7 +6,6 @@ const sections = {
   contacts: { html: "contacts.html", css: "./Resources/Styles/contacts.css", js: "./Resources/Scripts/contacts.js" }
 };
 
-// Utility: Load CSS file dynamically
 function loadCSS(file) {
   if (!document.querySelector(`link[href="${file}"]`)) {
     const link = document.createElement("link");
@@ -17,16 +15,20 @@ function loadCSS(file) {
   }
 }
 
-// Utility: Load JS file dynamically
-function loadJS(file) {
+function loadJS(file, callback) {
   if (!document.querySelector(`script[src="${file}"]`)) {
     const script = document.createElement("script");
     script.src = file;
+    script.onload = () => {
+      console.log(`${file} loaded`);
+      if (typeof callback === "function") callback();
+    };
     document.body.appendChild(script);
+  } else if (typeof callback === "function") {
+    callback();
   }
 }
 
-// Load section content
 function loadSection(id) {
   const { html, css, js } = sections[id];
 
@@ -36,17 +38,25 @@ function loadSection(id) {
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, "text/html");
       const template = doc.querySelector("template");
-      if (template) {
-        const section = document.getElementById(id);
-        section.innerHTML = ""; // clear old content
-        section.appendChild(template.content.cloneNode(true));
+      if (!template) return;
 
-        loadCSS(css);
-        loadJS(js);
-      }
+      const section = document.getElementById(id);
+      section.innerHTML = "";
+      section.appendChild(template.content.cloneNode(true));
+
+      loadCSS(css);
+      loadJS(js, () => {
+        const initFn = window[`init${id.charAt(0).toUpperCase() + id.slice(1)}Section`];
+        if (typeof initFn === "function") {
+          initFn(section);  // pass the container
+          console.log(`${id} section init executed`);
+        }
+      });
     })
     .catch(err => console.error(`Error loading ${id}:`, err));
 }
 
-// Load all sections on page load
-Object.keys(sections).forEach(id => loadSection(id));
+
+document.addEventListener("DOMContentLoaded", () => {
+  Object.keys(sections).forEach(id => loadSection(id));
+});
