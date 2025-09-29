@@ -48,17 +48,12 @@ nav a:hover {
   color: var(--kobi); /* magenta accent */
 }
 
-/* Main */
-main {
-  padding-top: var(--navbar-height);
-}
-
 section {
   min-height: 100vh;
-  padding: 100px 20px 20px;
+  padding: var(--navbar-height) 20px 20px;
   background: var(--blond);
   color: var(--text-dark);
-  border-bottom: 2px solid var(--lemon-yellow); /* subtle section divider */
+  border-bottom: 2px solid var(--lemon-yellow);
 }
 
 /* Footer */
