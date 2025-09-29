@@ -1,6 +1,7 @@
 // Map sections to their files
 const sections = {
   home: { html: "home.html", css: "./Resources/Styles/home.css", js: "./Resources/Scripts/home.js" },
+  aboutMe: { html: "about-me.html", css: "./Resources/Styles/about-me.css", js: "./Resources/Scripts/about-me.js" },
   gallery: { html: "gallery.html", css: "./Resources/Styles/gallery.css", js: "./Resources/Scripts/gallery.js" },
   projects: { html: "projects.html", css: "./Resources/Styles/projects.css", js: "./Resources/Scripts/projects.js" },
   contacts: { html: "contacts.html", css: "./Resources/Styles/contacts.css", js: "./Resources/Scripts/contacts.js" }

@@ -1,8 +1,6 @@
 /* Home Section with background image */
 .home-section {
   min-height: 100vh;
-  padding-top: var(--navbar-height);
-  background: url("./../Assets/Images/home-bg.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
