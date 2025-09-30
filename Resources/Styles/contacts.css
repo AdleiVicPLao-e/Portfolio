@@ -1,0 +1,53 @@
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #0c47a1;
+  text-decoration: underline;
+}
+
+/* Wrap address + map together so they behave like a contact item */
+.contact-map {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* same gap as contact-infos */
+  margin-top: 15px; /* matches rhythm */
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-item.address {
+  margin: 0; /* remove extra margin */
+  font-weight: 500;
+}
