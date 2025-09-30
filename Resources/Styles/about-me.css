@@ -1,46 +1,21 @@
-.about-section {
-  background: linear-gradient(to bottom, var(--light-gray), var(--gray), var(--light-gray));
-  color: var(--black);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+.section-content {
   box-sizing: border-box;
   padding: 20px;
 }
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  margin-bottom: 15px;
-}
-
-.skills-subtitle {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #333333;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  margin-bottom: 10px;
-}
-
-.skill-item span {
-  transition: all 0.3s ease;
-}
-
-.skill-item:hover span {
-  color: #1a73e8;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-  transform: scale(1.05);
-}
-
-
 .about-layout {
   max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.skills-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333333;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 
 .skills-row {
@@ -60,16 +35,15 @@
 
 .skills-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
-  flex-wrap: wrap;
 }
 
 .skills-table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-  justify-content: center;
   justify-items: center;
 }
 
@@ -81,13 +55,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 120px;
+  cursor: pointer;
+}
+
+
+.skill-item span {
+  margin-top: 5px;
+  white-space: normal;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+
+.skill-item:hover span {
+  color: #1a73e8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 .skill-item img {
-  width: 40px;
+  width: auto;
   height: 40px;
   margin-bottom: 5px;
+  transition: transform 0.3s ease;
 }
+
+.skill-item:hover img {
+  transform: scale(1.2);
+}
+
 .about-row {
   display: flex;
   flex-wrap: wrap;
@@ -104,26 +103,25 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   flex: 1 1 300px;
   max-width: 350px;
-  min-width: 250px; 
+  min-width: 250px;
 }
 
 .grad-pic {
-  width: 100%;        
-  max-width: 250px;   
-  height: auto;       
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   border-radius: 10%;
   border: 3px solid var(--white);
   display: block;
 }
 
-
 @media (max-width: 768px) {
   .skills-icons {
     justify-content: center;
   }
+
   .grad-pic {
     max-width: 150px;
   }
