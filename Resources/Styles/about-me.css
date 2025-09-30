@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 20px;
 }
+
 .about-layout {
   max-width: 1200px;
   width: 100%;
@@ -13,7 +14,7 @@
 .skills-subtitle {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #333333;
+  color: var(--text-darkest);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
@@ -25,7 +26,7 @@
 .skills-block {
   border-radius: 12px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(167, 167, 167, 0.233);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -61,17 +62,16 @@
   cursor: pointer;
 }
 
-
 .skill-item span {
   margin-top: 5px;
   white-space: normal;
   word-wrap: break-word;
   cursor: pointer;
+  color: var(--text-darkest);
 }
 
-
 .skill-item:hover span {
-  color: #1a73e8;
+  color: var(--accent-1);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
 }
@@ -95,7 +95,7 @@
 }
 
 .about-col {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(167, 167, 167, 0.233);
   padding: 20px;
   border-radius: 8px;
   box-sizing: border-box;
@@ -106,6 +106,7 @@
   flex: 1 1 300px;
   max-width: 350px;
   min-width: 250px;
+  color: var(--text-darkest);
 }
 
 .grad-pic {
@@ -117,12 +118,59 @@
   display: block;
 }
 
-@media (max-width: 768px) {
-  .skills-icons {
-    justify-content: center;
+@media (max-width: 767px) {
+  .gallery-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    height: auto;
+    position: relative;
   }
 
-  .grad-pic {
-    max-width: 150px;
+  .main-carousel {
+    width: 100%;
+    height: 250px;
+  }
+
+  .album-scroller {
+    width: 100%;
+    height: 120px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .album-scroller .thumbs {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: row;
+    transform: translate(-50%, -50%);
+    height: 100%;
+  }
+
+  .thumb {
+    width: 80px;
+    height: 80px;
+    margin: 0 5px;
+    transform-origin: center center;
+    cursor: pointer;
+    border: 2px solid var(--bg-lightest);
+    opacity: 0.5;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .thumb.active {
+    opacity: 1;
+    border-color: var(--accent-1);
+    z-index: 10;
   }
 }
+
+

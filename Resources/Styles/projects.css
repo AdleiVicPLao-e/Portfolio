@@ -6,35 +6,34 @@
 }
 
 .project-block {
-  display: flex;              
-  flex-wrap: wrap;           
-  justify-content: center;  
-  gap: 25px;                 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
   text-align: center;
   width: 100%;
 }
 
 .project-subtitle {
-  grid-column: 1 / -1;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 5px;
   text-transform: uppercase;
-  color: #333;
+  color: var(--text-darkest);
   text-align: center;
 }
 
 .project-item {
   width: 300px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(var(--bg-lightest-rgb), 0.85);
   border-radius: 12px;
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .project-item img {
@@ -58,20 +57,19 @@
   background: rgba(0,0,0,0.6);
   z-index: 1000;
   padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
 .modal.active {
-  display: flex; 
-}
-
-
-.modal.active {
+  display: flex;
   opacity: 1;
   pointer-events: all;
 }
 
 .modal-content {
-  background: #fff;
+  background-color: var(--bg-lightest);
   border-radius: 12px;
   padding: 30px;
   max-width: 700px;
@@ -85,7 +83,7 @@
   gap: 18px;
   line-height: 1.6;
   font-size: 1rem;
-  color: #222;
+  color: var(--text-darkest);
 }
 
 .modal.active .modal-content {
@@ -98,31 +96,31 @@
   font-weight: 700;
   margin-bottom: 5px;
   line-height: 1.4;
-  color: #1a1a1a;
+  color: var(--text-darkest);
 }
 
 .modal-content .project-duration {
   font-size: 0.9rem;
   font-weight: 500;
   margin-left: 8px;
-  color: #666;
+  color: var(--text-dark);
 }
 
 .modal-content p {
   margin: 0;
   font-size: 0.95rem;
-  color: #444;
+  color: var(--text-dark);
 }
 
 .modal-content em {
   font-style: italic;
-  color: #1a73e8;
   font-weight: 500;
+  color: var(--accent-1);
 }
 
 .modal-content strong {
   font-weight: 600;
-  color: #111;
+  color: var(--text-darkest);
 }
 
 .modal-content ul {
@@ -145,11 +143,11 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #333;
-  transition: transform 0.2s ease;
+  color: var(--text-darkest);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .modal-close:hover {
   transform: scale(1.2);
-  color: #d00;
+  color: var(--accent-2);
 }

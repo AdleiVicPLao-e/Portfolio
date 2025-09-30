@@ -48,7 +48,7 @@ function loadSection(id) {
       loadJS(js, () => {
         const initFn = window[`init${id.charAt(0).toUpperCase() + id.slice(1)}Section`];
         if (typeof initFn === "function") {
-          initFn(section);  // pass the container
+          initFn(section);
           console.log(`${id} section init executed`);
         }
       });
@@ -59,4 +59,57 @@ function loadSection(id) {
 
 document.addEventListener("DOMContentLoaded", () => {
   Object.keys(sections).forEach(id => loadSection(id));
+});
+
+const floatingBtn = document.getElementById("options-floating-btn");
+const themePanel = document.getElementById("theme-options-panel");
+
+floatingBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    // Rotate button
+    floatingBtn.classList.add("rotate");
+    setTimeout(() => floatingBtn.classList.remove("rotate"), 500);
+
+    // Toggle theme panel
+    if (!themePanel.classList.contains("show")) {
+        themePanel.style.display = "flex"; // ensure visible before animation
+        themePanel.classList.remove("hide");
+        themePanel.classList.add("show");
+    } else {
+        themePanel.classList.remove("show");
+        themePanel.classList.add("hide");
+        setTimeout(() => {
+            themePanel.style.display = "none";
+            themePanel.classList.remove("hide");
+        }, 400); // match animation duration
+    }
+});
+
+// Close panel when clicking outside
+document.addEventListener("click", (e) => {
+    if (!themePanel.contains(e.target) && !floatingBtn.contains(e.target) && themePanel.classList.contains("show")) {
+        themePanel.classList.remove("show");
+        themePanel.classList.add("hide");
+        setTimeout(() => {
+            themePanel.style.display = "none";
+            themePanel.classList.remove("hide");
+        }, 400); // match hide animation duration
+    }
+});
+
+// Theme selection
+const themeButtons = document.querySelectorAll(".theme-btn");
+themeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const theme = btn.getAttribute("data-theme");
+
+        document.documentElement.classList.remove(
+            "theme-light","theme-dark","theme-creme","theme-retro",
+            "theme-vintage","theme-greyscale","theme-eyesore","theme-halloween"
+        );
+
+        document.documentElement.classList.add(`theme-${theme}`);
+        console.log(`Theme switched to: ${theme}`);
+    });
 });

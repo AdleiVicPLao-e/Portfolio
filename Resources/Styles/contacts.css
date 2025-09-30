@@ -1,6 +1,7 @@
 .section-title {
   text-align: center;
   margin-bottom: 20px;
+  color: var(--text-darkest);
 }
 
 .contact-infos {
@@ -8,6 +9,7 @@
   flex-direction: column;
   gap: 15px; 
   margin-top: 20px;
+  color: var(--text-dark);
 }
 
 .contact-item {
@@ -16,38 +18,68 @@
   gap: 12px;
   font-size: 1rem;
   line-height: 1.5;
+  color: var(--text-dark);
 }
 
 .contact-icon {
   font-size: 1.2rem;
   min-width: 24px;
   text-align: center;
+  color: var(--accent-1);
 }
 
 .contact-item a {
-  color: var(--black);
+  color: var(--text-darkest);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
-  color: #0c47a1;
+  color: var(--accent-2);
   text-decoration: underline;
 }
 
-/* Wrap address + map together so they behave like a contact item */
 .contact-map {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* same gap as contact-infos */
-  margin-top: 15px; /* matches rhythm */
+  gap: 15px;
+  margin-top: 15px;
   width: 100%;
   max-width: 600px;
   border-radius: 8px;
   overflow: hidden;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 }
 
 .contact-item.address {
-  margin: 0; /* remove extra margin */
+  margin: 0;
   font-weight: 500;
+  color: var(--text-darkest);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-infos, .contact-map {
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .contact-item {
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+
+  .contact-icon {
+    font-size: 1rem;
+    min-width: 20px;
+  }
+
+  .contact-map {
+    max-width: 100%;
+  }
 }
