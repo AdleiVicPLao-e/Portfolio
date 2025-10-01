@@ -8,8 +8,6 @@
   text-align: center;
   box-sizing: border-box;
   margin-top: 45px;
-  background-color: var(--bg-light);
-  color: var(--text-darkest);
 }
 
 .profile-container {
@@ -116,18 +114,21 @@
 
   .home-text h1 {
     font-size: 3.5rem;
+    color: var(--text-lightest);
   }
 
   .home-text h2 {
     font-size: 2rem;
+    color: var(--text-light);
   }
 
   .home-text p {
     font-size: 1.5rem;
+    color: var(--text-lightest);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .profile-container {
     width: 100px;
     height: 100px;
@@ -135,13 +136,16 @@
 
   .home-text h1 {
     font-size: 1.3rem;
+    color: var(--text-lightest);
   }
 
   .home-text h2 {
     font-size: 0.9rem;
+    color: var(--text-light);
   }
 
   .home-text p {
     font-size: 0.8rem;
+    color: var(--text-lightest);
   }
 }

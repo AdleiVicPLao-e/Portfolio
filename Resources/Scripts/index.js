@@ -113,3 +113,16 @@ themeButtons.forEach(btn => {
         console.log(`Theme switched to: ${theme}`);
     });
 });
+
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+const navCollapseEl = document.getElementById('navbarNav');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const bsCollapse = bootstrap.Collapse.getInstance(navCollapseEl);
+
+    if (bsCollapse) {
+      bsCollapse.hide();
+    }
+  });
+});

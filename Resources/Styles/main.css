@@ -378,10 +378,11 @@ footer {
     padding: 1em;
     width: 100%;
 }
+
 @media (max-width: 767px) {
   body {
     font-size: clamp(0.85rem, 2.5vw, 1rem);
-    background-color: var(--bg-darkest);
+    background-color: var(--bg-dark);
     color: var(--text-lightest);
     transition: background 0.4s ease, color 0.4s ease;
   }
@@ -433,7 +434,6 @@ footer {
   section {
     scroll-margin-top: var(--navbar-height);
     min-height: auto;
-    background: var(--bg-darkest);
     color: var(--text-lightest);
   }
 

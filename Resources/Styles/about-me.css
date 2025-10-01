@@ -118,59 +118,41 @@
   display: block;
 }
 
-@media (max-width: 767px) {
-  .gallery-container {
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-    height: auto;
-    position: relative;
-  }
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  padding: 20px;
+}
 
-  .main-carousel {
-    width: 100%;
-    height: 250px;
-  }
+.modal.active {
+  display: flex;
+}
 
-  .album-scroller {
-    width: 100%;
-    height: 120px;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1200px;
-    position: relative;
-    margin-top: 10px;
-  }
+.modal-content {
+  background: #111;
+  border-radius: 12px;
+  padding: 10px;
+  max-width: 95%;
+  max-height: 95%;
+  overflow: hidden;
+  position: relative;
 
-  .album-scroller .thumbs {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform-style: preserve-3d;
-    display: flex;
-    flex-direction: row;
-    transform: translate(-50%, -50%);
-    height: 100%;
-  }
-
-  .thumb {
-    width: 80px;
-    height: 80px;
-    margin: 0 5px;
-    transform-origin: center center;
-    cursor: pointer;
-    border: 2px solid var(--bg-lightest);
-    opacity: 0.5;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
-
-  .thumb.active {
-    opacity: 1;
-    border-color: var(--accent-1);
-    z-index: 10;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
 }
 
 
+.modal-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
