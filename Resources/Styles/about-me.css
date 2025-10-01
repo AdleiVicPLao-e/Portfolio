@@ -117,16 +117,15 @@
   border: 3px solid var(--white);
   display: block;
 }
-
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
   z-index: 1000;
-  padding: 20px;
+  padding: 10px;
 }
 
 .modal.active {
@@ -136,23 +135,37 @@
 .modal-content {
   background: #111;
   border-radius: 12px;
-  padding: 10px;
-  max-width: 95%;
-  max-height: 95%;
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  max-height: 800px;
   overflow: hidden;
   position: relative;
 
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  padding: 0;
 }
 
-
 .modal-body {
-  position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    height: 95%;
+    flex-direction: column;
+  }
 }

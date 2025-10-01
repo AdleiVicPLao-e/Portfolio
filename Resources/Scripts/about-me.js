@@ -9,10 +9,7 @@ function initAboutMeSection(container) {
     Java: `<h2>Java</h2><p>Sample Library Management System coded in Java.</p>`,
 
     JavaScript: `<iframe src="./Resources/Assets/Projects/tetris/tetris.html" 
-        width="600" height="400" 
-        style="border:none;" 
-        sandbox="allow-scripts allow-same-origin">
-</iframe>`,
+        style="border:none;width:100%;height:100%;"></iframe>`,
 
     HTML: `<h2>HTML</h2><p>Portfolio landing page built with HTML5.</p>`,
 
@@ -25,7 +22,6 @@ function initAboutMeSection(container) {
     R: `<h2>R</h2><p>Statistical visualization with ggplot2.</p>`,
 
     Spreadsheets: `<h2>Spreadsheets</h2><p>Automated budget tracker with formulas & charts.</p>`
-    
   };
 
   container.querySelectorAll(".skill-item").forEach(skill => {
@@ -41,13 +37,18 @@ function initAboutMeSection(container) {
 
       const iframe = modalBody.querySelector("iframe");
       if (iframe) {
+        function resizeIframe() {
+          iframe.style.width = modalBody.clientWidth + "px";
+          iframe.style.height = modalBody.clientHeight + "px";
+        }
+        window.addEventListener("resize", resizeIframe);
+        resizeIframe();
+
         iframe.focus();
         iframe.addEventListener("load", () => {
           try {
             iframe.contentWindow.addEventListener("keydown", (e) => {
-              if (e.key === "Escape") {
-                closeModal();
-              }
+              if (e.key === "Escape") closeModal();
             });
           } catch (err) {
             console.warn("Could not attach Esc listener to iframe:", err);
@@ -65,22 +66,10 @@ function initAboutMeSection(container) {
   }
 
   closeBtn.addEventListener("click", closeModal);
-
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("active")) {
-      closeModal();
-    }
-  });
+  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.classList.contains("active")) closeModal(); });
 
   window.addEventListener("message", (event) => {
-    if (event.data && event.data.action === "closeModal") {
-      closeModal();
-    }
+    if (event.data && event.data.action === "closeModal") closeModal();
   });
 }

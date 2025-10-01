@@ -4,127 +4,121 @@
 <meta charset="UTF-8">
 <title>Tetris Game</title>
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    touch-action: none;
-    background: #111;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  h1 {
-    margin: 10px;
-    font-size: 20px;
-  }
-
-  .game-container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: center;
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  box-sizing: border-box;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
+.game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  transform-origin: top left;
+  max-width: 100%;
+  max-height: 100%;
+}
 
-  canvas {
-    background: #222;
-    display: block;
-    outline: none;
-    border: 2px solid #444;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+canvas {
+  background: #222;
+  border: 2px solid #444;
+  image-rendering: pixelated;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+canvas#game {
+  width: auto;
+  height: auto;
+  max-width: 70vw;
+  max-height: 70vh;
+  flex-shrink: 0;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.side-panel .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.side-panel .info span {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+
+.side-panel canvas {
+  width: 80px;
+  height: 80px;
+}
+.tetris-controls { display: flex; gap: 8px; justify-content: center; }
+.tetris-controls button { font-size: 18px; padding: 10px 14px; border-radius:6px; border:none; background:#444; color:#fff; cursor:pointer; }
+#overlay { position: absolute; inset:0; display:flex; justify-content:center; align-items:center; font-size:28px; background: rgba(0,0,0,0.8); color:#fff; display:none; }
+@media (max-width: 768px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-height: 95vh;
+  }
+
+  canvas#game {
+    max-width: 90vw;
+    max-height: 50vh;
   }
 
   .side-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .info {
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .info span {
-    display: block;
-    margin: 4px 0;
-    font-size: 14px;
-  }
-
-  .tetris-controls {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+    flex-direction: row;       /* put everything beside each other */
     justify-content: center;
-    align-items: center;
+    gap: 15px;
+    width: 100%;
   }
 
-  .tetris-controls button {
-    font-size: 18px;
-    padding: 10px 14px;
-    border-radius: 6px;
-    border: none;
-    background: #444;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.1s ease;
-    min-width: 50px;
+  .side-panel canvas {
+    width: 60px;
+    height: 60px;
   }
 
-  .tetris-controls button:active,
-  .tetris-controls button.flash {
-    background: #fff;
-    color: #000;
-    transform: scale(1.2);
+  .side-panel .info {
+    flex-direction: column;    /* score on top of level */
   }
-
-  #overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    color: #fff;
-    font-size: 28px;
-    font-weight: bold;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-  }
+}
 </style>
 </head>
 <body>
-<h1>JavaScript Tetris</h1>
-
 <div class="game-container">
   <canvas id="game" width="160" height="320" tabindex="0"></canvas>
-
   <div class="side-panel">
-    <div>
-      <h3>Next</h3>
-      <canvas id="next" width="64" height="64"></canvas>
-    </div>
-    <div>
-      <h3>Hold</h3>
-      <canvas id="hold" width="64" height="64"></canvas>
-    </div>
-    <div class="info">
-      <span>Score: <span id="score">0</span></span>
-      <span>Level: <span id="level">1</span></span>
-    </div>
+  <div class="info">
+    <span>Score: <span id="score">0</span></span>
+    <span>Level: <span id="level">1</span></span>
   </div>
+  <div>
+    <h3>Next</h3>
+    <canvas id="next" width="64" height="64"></canvas>
+  </div>
+  <div>
+    <h3>Hold</h3>
+    <canvas id="hold" width="64" height="64"></canvas>
+  </div>
+</div>
 
   <div class="tetris-controls">
     <button id="btn-left">⬅️</button>
@@ -134,11 +128,23 @@
     <button id="btn-harddrop">⏬</button>
     <button id="btn-hold">🅷</button>
   </div>
-
   <div id="overlay"></div>
 </div>
 
 <script>
+function scaleGameContainer() {
+  const container = document.querySelector(".game-container");
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  const containerWidth = container.scrollWidth;
+  const containerHeight = container.scrollHeight;
+  const scale = Math.min(w / containerWidth, h / containerHeight, 1);
+  container.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener("DOMContentLoaded", scaleGameContainer);
+window.addEventListener("resize", scaleGameContainer);
+
   const COLS = 10, ROWS = 20, BLOCK = 16;
   let dropCounter = 0, dropInterval = 1000, lastTime = 0, animationId;
   let board = Array.from({length: ROWS},()=>Array(COLS).fill(0));
