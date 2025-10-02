@@ -1,0 +1,257 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.904);
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.game-container {
+  position: relative;
+  width: 100%;      
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*===== Startup Screen =====*/
+#startupScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#startupBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.console-wrapper {
+  position: relative;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 250px auto 0;
+  z-index: 1;
+}
+
+#consoleImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 3;
+}
+
+#cartridgeImg {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-52%);
+  width: 220px;
+  cursor: pointer;
+  transition: top 1.2s ease;
+  z-index: 2;
+}
+
+#cartridgeImg.inserted {
+  top: -100px;
+  z-index: 2;
+}
+
+/*===== Loading Screen =====*/
+.loading-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.loading-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 40%;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
+
+#progressBarContainer {
+  width: 60%;
+  height: 30px;
+  background: #333;
+  border-radius: 15px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+#progressBar {
+  width: 0;
+  height: 100%;
+  background: limegreen;
+  transition: width 0.2s;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+}
+
+/*===== Game Screen =====*/
+#gameScreen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.round-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.game-ui {
+  position: relative;
+  z-index: 2; /* above background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#roundInfo {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px black;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#letterPool, #selectedWord {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.letter-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.letter-btn:hover {
+  background: #666;
+}
+
+.letter-btn.selected {
+  background: #1e90ff;
+  color: white;
+}
+
+
+#battleUI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.hp-bar {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.heart {
+  width: 30px;
+  height: 30px;
+}
+
+.enemy-hp-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;  
+  height: 25px;  
+  background: #330000; 
+  border: 2px solid #800000;
+  border-radius: 5px;
+  z-index: 3;
+  display: flex;
+}
+
+.enemy-health-fill {
+  height: 100%;
+  background: red;
+  width: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+
+.slash {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: auto;
+  z-index: 5;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Game Demo</title>
+  <link rel="stylesheet" href="wordy.css">
+</head>
+<body>
+  <div class="game-container">
+    <div id="startupScreen" class="screen">
+      <img id="startupBg" src="./assets/Server-bg2.gif" alt="Background">
+      <div class="console-wrapper">
+        <img id="consoleImg" src="./assets/Console1.png" alt="Console">
+        <img id="cartridgeImg" src="./assets/Cartridge1.png" alt="Cartridge">
+      </div>
+    </div>
+
+  <div id="loadingScreen" class="screen hidden">
+    <img src="./assets/5.jpg" alt="Background" class="loading-bg">
+    <div class="loading-content">
+      <h2>Loading...</h2>
+      <div id="progressBarContainer">
+        <div id="progressBar"></div>
+      </div>
+      <p id="progressText">0%</p>
+    </div>
+  </div>
+
+  <div id="gameScreen" class="screen hidden">
+  <div id="playerHP" class="player-hp-container"></div>
+  <div id="enemyHP" class="enemy-hp-container"></div>
+
+  <div class="game-ui">
+    <h2>Make a Word!</h2>
+    <div id="roundInfo">
+      <span id="roundCounter">Round: 1</span> | 
+      <span id="timer">Time Left: 30s</span>
+    </div>
+
+    <div id="letterPool"></div>
+    <div id="selectedWord"></div>
+
+    <div class="game-buttons">
+      <button id="submitBtn" disabled>Submit</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <img id="roundBackground" class="round-bg" src="" alt="Background">
+  <img id="slashEffect" class="slash hidden" src="" alt="Slash Effect">
+</div>
+
+    <!-- End -->
+    <div id="endScreen" class="screen hidden">
+      <h2 id="finalResult">Game Over</h2>
+      <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="wordy.js"></script>
+  <script src="game.js"></script>
+  <script src="loading.js"></script>
+  <script src="cartridge.js"></script>
+</body>
+</html>

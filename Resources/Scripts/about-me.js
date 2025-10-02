@@ -6,7 +6,8 @@ function initAboutMeSection(container) {
   const closeBtn = modal.querySelector(".modal-close");
 
   const skillProjects = {
-    Java: `<h2>Java</h2><p>Sample Library Management System coded in Java.</p>`,
+    Java: `<iframe src="./Resources/Assets/Projects/java/wordy.html" 
+        style="border:none;width:100%;height:100%;"></iframe>`,
 
     JavaScript: `<iframe src="./Resources/Assets/Projects/tetris/tetris.html" 
         style="border:none;width:100%;height:100%;"></iframe>`,
