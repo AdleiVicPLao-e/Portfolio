@@ -1,76 +1,80 @@
 function initAboutMeSection(container) {
-  if (!container) return;
+    if (!container) return;
 
-  const modal = container.querySelector("#skillModal");
-  const modalBody = modal.querySelector(".modal-body");
-  const closeBtn = modal.querySelector(".modal-close");
+    const modal = container.querySelector("#skillModal");
+    const modalBody = modal.querySelector(".modal-body");
+    const closeBtn = modal.querySelector(".modal-close");
 
-  const skillProjects = {
-    Java: `<iframe src="./Resources/Assets/Projects/java/wordy.html" 
+    const skillProjects = {
+        Java: `<iframe src="./Resources/Assets/Projects/java/wordy.html" 
         style="border:none;width:100%;height:100%;"></iframe>`,
 
-    JavaScript: `<iframe src="./Resources/Assets/Projects/tetris/tetris.html" 
+        JavaScript: `<iframe src="./Resources/Assets/Projects/tetris/tetris.html" 
         style="border:none;width:100%;height:100%;"></iframe>`,
 
-    HTML: `<h2>HTML</h2><p>Portfolio landing page built with HTML5.</p>`,
+        HTML: `<h2>HTML</h2><p>Portfolio landing page built with HTML5.</p>`,
 
-    CSS: `<h2>CSS</h2><p>Custom responsive design using Flexbox and Grid.</p>`,
+        CSS: `<h2>CSS</h2><p>Custom responsive design using Flexbox and Grid.</p>`,
 
-    Python: `<h2>Python</h2><p>Data analysis project using Pandas & Matplotlib.</p>`,
+        Python: `<h2>Python</h2><p>Data analysis project using Pandas & Matplotlib.</p>`,
 
-    MySql: `<h2>MySQL</h2><p>Normalized e-commerce database schema design.</p>`,
+        MySql: `<h2>MySQL</h2><p>Normalized e-commerce database schema design.</p>`,
 
-    R: `<h2>R</h2><p>Statistical visualization with ggplot2.</p>`,
+        R: `<h2>R</h2><p>Statistical visualization with ggplot2.</p>`,
 
-    Spreadsheets: `<h2>Spreadsheets</h2><p>Automated budget tracker with formulas & charts.</p>`
-  };
+        Spreadsheets: `<h2>Spreadsheets</h2><p>Automated budget tracker with formulas & charts.</p>`
+    };
 
-  container.querySelectorAll(".skill-item").forEach(skill => {
-    skill.addEventListener("click", () => {
-      const skillName = skill.querySelector("span").textContent.trim();
-      modalBody.innerHTML =
-        skillProjects[skillName] ||
-        `<p>No project available yet for ${skillName}.</p>`;
+    container.querySelectorAll(".skill-item").forEach(skill => {
+        skill.addEventListener("click", () => {
+            const skillName = skill.querySelector("span").textContent.trim();
+            modalBody.innerHTML =
+                skillProjects[skillName] ||
+                `<p>No project available yet for ${skillName}.</p>`;
 
-      modal.classList.add("active");
-      modal.style.opacity = "1";
-      modal.style.pointerEvents = "auto";
+            modal.classList.add("active");
+            modal.style.opacity = "1";
+            modal.style.pointerEvents = "auto";
 
-      const iframe = modalBody.querySelector("iframe");
-      if (iframe) {
-        function resizeIframe() {
-          iframe.style.width = modalBody.clientWidth + "px";
-          iframe.style.height = modalBody.clientHeight + "px";
-        }
-        window.addEventListener("resize", resizeIframe);
-        resizeIframe();
+            const iframe = modalBody.querySelector("iframe");
+            if (iframe) {
+                function resizeIframe() {
+                    iframe.style.width = modalBody.clientWidth + "px";
+                    iframe.style.height = modalBody.clientHeight + "px";
+                }
+                window.addEventListener("resize", resizeIframe);
+                resizeIframe();
 
-        iframe.focus();
-        iframe.addEventListener("load", () => {
-          try {
-            iframe.contentWindow.addEventListener("keydown", (e) => {
-              if (e.key === "Escape") closeModal();
-            });
-          } catch (err) {
-            console.warn("Could not attach Esc listener to iframe:", err);
-          }
+                iframe.focus();
+                iframe.addEventListener("load", () => {
+                    try {
+                        iframe.contentWindow.addEventListener("keydown", (e) => {
+                            if (e.key === "Escape") closeModal();
+                        });
+                    } catch (err) {
+                        console.warn("Could not attach Esc listener to iframe:", err);
+                    }
+                });
+            }
         });
-      }
     });
-  });
 
-  function closeModal() {
-    modal.classList.remove("active");
-    modal.style.opacity = "0";
-    modal.style.pointerEvents = "none";
-    modalBody.innerHTML = "";
-  }
+    function closeModal() {
+        modal.classList.remove("active");
+        modal.style.opacity = "0";
+        modal.style.pointerEvents = "none";
+        modalBody.innerHTML = "";
+    }
 
-  closeBtn.addEventListener("click", closeModal);
-  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.classList.contains("active")) closeModal(); });
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) closeModal();
+    });
 
-  window.addEventListener("message", (event) => {
-    if (event.data && event.data.action === "closeModal") closeModal();
-  });
+    window.addEventListener("message", (event) => {
+        if (event.data && event.data.action === "closeModal") closeModal();
+    });
 }

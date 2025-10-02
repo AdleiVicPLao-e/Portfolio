@@ -5,6 +5,8 @@ const resetBtn = document.getElementById("resetBtn");
 const roundCounterEl = document.getElementById("roundCounter");
 const timerEl = document.getElementById("timer");
 const roundBackground = document.getElementById("roundBackground");
+const congratsOverlay = document.getElementById("congratsOverlay");
+const congratsImage = document.getElementById("congratsImage");
 
 const playerHPDiv = document.getElementById("playerHP");
 const enemyHPDiv = document.getElementById("enemyHP");
@@ -97,6 +99,20 @@ function startTimer() {
   }, 1000);
 }
 
+function showCongrats(type) {
+  if (type === "round") congratsImage.src = "./assets/congrats-round.png";
+  else if (type === "winner") congratsImage.src = "./assets/congrats-winner.png";
+
+  congratsOverlay.classList.remove("hidden");
+
+  if (type === "round") {
+    setTimeout(() => {
+      congratsOverlay.classList.add("hidden");
+    }, 2000);
+  }
+}
+
+
 function damageEnemy(amount) {
   enemyHP -= amount;
   if (enemyHP < 0) enemyHP = 0;
@@ -105,14 +121,15 @@ function damageEnemy(amount) {
 
   if (enemyHP <= 0) {
     if (round < maxRounds) {
-      alert(`Enemy defeated! Proceeding to Round ${round + 1}`);
+      showCongrats("round");
       round++;
-      startRound();
+      setTimeout(() => startRound(), 2000);
     } else {
-      alert("You Win the Game!");
+      showCongrats("winner");
     }
   }
 }
+
 
 function damagePlayer(amount) {
   playerHP -= amount;
@@ -191,10 +208,20 @@ function validateWord(word) {
 
 submitBtn.addEventListener("click", () => {
   damageEnemy(currentWord.length);
+
+  if (currentWord.length >= 5) {
+    if (currentWord.length <= 6) timeLeft += 5;
+    else if (currentWord.length <= 8) timeLeft += 10;
+    else timeLeft += 15;
+
+    if (timeLeft > 60) timeLeft = 60;
+
+    timerEl.textContent = `Time Left: ${timeLeft}s`;
+  }
+
   selectedLetters = [];
   selectedWordDiv.innerHTML = "";
   submitBtn.disabled = true;
+
   letterPoolDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
 });
-
-resetBtn.addEventListener("click", () => startRound());

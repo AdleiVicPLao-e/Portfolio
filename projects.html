@@ -1,132 +1,131 @@
 <template id="projects-template">
-  <section class="section-content p-4">
-    <div class="project-layout">
-      <h3 class="section-title">PROJECTS</h3>
+    <section class="section-content p-4">
+        <div class="project-layout">
+            <h3 class="section-title">PROJECTS</h3>
 
-      <h4 class="project-subtitle">On-the-Job Training</h4>
-      <div class="project-block">
-        <div class="project-item" data-project="ojt1">
-          <img src="https://via.placeholder.com/300x180" alt="Digital Capabilities Project" class="project-thumb">
+            <h4 class="project-subtitle">On-the-Job Training</h4>
+            <div class="project-block">
+                <div class="project-item" data-project="ojt1" data-alt="Digital Capabilities Project">
+                    <img src="https://via.placeholder.com/300x180" alt="Digital Capabilities Project" class="project-thumb">
+                </div>
+                <div class="project-item" data-project="ojt2" data-alt="Website Improvement Project">
+                    <img src="https://via.placeholder.com/300x180" alt="Website Improvement Project" class="project-thumb">
+                </div>
+            </div>
+
+            <h4 class="project-subtitle">Capstone Project</h4>
+            <div class="project-block">
+                <div class="project-item" data-project="capstone" data-alt="Capstone AR Project">
+                    <img src="https://via.placeholder.com/300x180" alt="Capstone AR Project" class="project-thumb">
+                </div>
+            </div>
+
+            <h4 class="project-subtitle">Academic Projects</h4>
+            <div class="project-block">
+                <div class="project-item" data-project="wordy" data-alt="Wordy Game Project">
+                    <img src="./Resources/Assets/Images/Projects/wordy.png" alt="Wordy Game Project" class="project-thumb">
+                </div>
+                <div class="project-item" data-project="doc-reviewer" data-alt="Document Reviewer Project">
+                    <img src="https://via.placeholder.com/300x180" alt="Document Reviewer Project" class="project-thumb">
+                </div>
+                <div class="project-item" data-project="outage-analysis" data-alt="Outage Analysis Project">
+                    <img src="https://via.placeholder.com/300x180" alt="Outage Analysis Project" class="project-thumb">
+                </div>
+                <div class="project-item" data-project="lol-assistant" data-alt="League of Legends Assistant Project">
+                    <img src="https://via.placeholder.com/300x180" alt="League of Legends Assistant Project" class="project-thumb">
+                </div>
+            </div>
         </div>
-        <div class="project-item" data-project="ojt2">
-          <img src="https://via.placeholder.com/300x180" alt="Website Improvement Project" class="project-thumb">
+    </section>
+
+    <div id="modal-ojt1" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h5>Digital Capabilities Professional Development System
+                <span class="project-duration">Jan 2025 – May 2025</span>
+            </h5>
+            <p>Kaisipan, Inc. — <em>Developer</em></p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript (React/Vue), Node.js, MySQL/PostgreSQL, Zoom API</p>
+            <ul>
+                <li><strong>Webinar Management:</strong> Automatically create Zoom meetings/webinars, send details to registered participants.</li>
+                <li><strong>Attendance Monitoring:</strong> Track join/leave times via Zoom API and mark attendance.</li>
+            </ul>
         </div>
-      </div>
+    </div>
 
-      <h4 class="project-subtitle">Capstone Project</h4>
-      <div class="project-block">
-        <div class="project-item" data-project="capstone">
-          <img src="https://via.placeholder.com/300x180" alt="Capstone AR Project" class="project-thumb">
+    <div id="modal-ojt2" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h5>Kaisipan, Inc. Website Improvement Implementation</h5>
+            <p><em>Developer</em></p>
+            <p><strong>Technologies:</strong> WordPress, HTML, CSS, JavaScript</p>
+            <ul>
+                <li>Enhanced website design, functionality, and performance.</li>
+                <li>Updated website design, layout, and content.</li>
+                <li>Optimized for performance and responsiveness.</li>
+            </ul>
         </div>
-      </div>
+    </div>
 
-      <h4 class="project-subtitle">Academic Projects</h4>
-      <div class="project-block">
-        <div class="project-item" data-project="wordy">
-          <img src="https://via.placeholder.com/300x180" alt="Wordy Game Project" class="project-thumb">
+    <div id="modal-capstone" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h5>AR-Driven Progressive Web Application for the SLU Museum of Igorot Culture</h5>
+            <p><em>Lead Developer</em></p>
+            <p>In collaboration with the SLU Museum of Igorot Culture.</p>
+            <ul>
+                <li>Progressive Web App with AR and Virtual Assistant functionalities.</li>
+                <li>Admin portal to manage artifacts and cultural data.</li>
+            </ul>
         </div>
-        <div class="project-item" data-project="doc-reviewer">
-          <img src="https://via.placeholder.com/300x180" alt="Document Reviewer Project" class="project-thumb">
+    </div>
+
+    <div id="modal-wordy" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h5>Client-Server “Wordy” Game <span class="project-duration">Mar – May 2023</span></h5>
+            <p><em>Project Lead</em></p>
+            <p><strong>Technologies:</strong> CORBA IDL (Host), Java (Client), Python (Client)</p>
+            <ul>
+                <li>Designed a multiplayer word game where players form words from random letters in a limited time.</li>
+            </ul>
         </div>
-        <div class="project-item" data-project="outage-analysis">
-          <img src="https://via.placeholder.com/300x180" alt="Outage Analysis Project" class="project-thumb">
+    </div>
+
+    <div id="modal-doc-reviewer" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h5>Two-Module Document Reviewer Website <span class="project-duration">Nov – Dec 2023</span></h5>
+            <p><em>Project Lead</em></p>
+            <ul>
+                <li>Developed back-end PHP scripts for document management.</li>
+                <li>Implemented API-powered PDF viewer with comments.</li>
+                <li>Built Node.js backend modules for extended functionality.</li>
+            </ul>
         </div>
-        <div class="project-item" data-project="lol-assistant">
-          <img src="https://via.placeholder.com/300x180" alt="League of Legends Assistant Project" class="project-thumb">
+    </div>
+
+    <div id="modal-outage-analysis" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h5>Power Outage Data Analysis Programs <span class="project-duration">Nov 2023</span></h5>
+            <p><em>Project Lead</em></p>
+            <ul>
+                <li>Utilized R to analyze power outage data (June–August 2023).</li>
+                <li>Generated visualizations for interpretation and reporting.</li>
+            </ul>
         </div>
-      </div>
     </div>
-  </section>
 
-  <!-- MODALS PLACED OUTSIDE PROJECT LAYOUT -->
-  <div id="modal-ojt1" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h5>Digital Capabilities Professional Development System
-        <span class="project-duration">Jan 2025 – May 2025</span>
-      </h5>
-      <p>Kaisipan, Inc. — <em>Developer</em></p>
-      <p><strong>Technologies:</strong> HTML, CSS, JavaScript (React/Vue), Node.js, MySQL/PostgreSQL, Zoom API</p>
-      <ul>
-        <li><strong>Webinar Management:</strong> Automatically create Zoom meetings/webinars, send details to registered participants.</li>
-        <li><strong>Attendance Monitoring:</strong> Track join/leave times via Zoom API and mark attendance.</li>
-      </ul>
+    <div id="modal-lol-assistant" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h5>Coaching & Analysis Assistant for League of Legends (LSTM) <span class="project-duration">Nov 2023</span></h5>
+            <p><em>Project Lead</em></p>
+            <ul>
+                <li>Developed Python program to predict professional LoL match outcomes.</li>
+                <li>Trained LSTM model on 2019–2023 competitive data across multiple metrics.</li>
+            </ul>
+        </div>
     </div>
-  </div>
-
-  <div id="modal-ojt2" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h5>Kaisipan, Inc. Website Improvement Implementation</h5>
-      <p><em>Developer</em></p>
-      <p><strong>Technologies:</strong> WordPress, HTML, CSS, JavaScript</p>
-      <ul>
-        <li>Enhanced website design, functionality, and performance.</li>
-        <li>Updated website design, layout, and content.</li>
-        <li>Optimized for performance and responsiveness.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="modal-capstone" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h5>AR-Driven Progressive Web Application for the SLU Museum of Igorot Culture</h5>
-      <p><em>Lead Developer</em></p>
-      <p>In collaboration with the SLU Museum of Igorot Culture.</p>
-      <ul>
-        <li>Progressive Web App with AR and Virtual Assistant functionalities.</li>
-        <li>Admin portal to manage artifacts and cultural data.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="modal-wordy" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h5>Client-Server “Wordy” Game <span class="project-duration">Mar – May 2023</span></h5>
-      <p><em>Project Lead</em></p>
-      <p><strong>Technologies:</strong> CORBA IDL (Host), Java (Client), Python (Client)</p>
-      <ul>
-        <li>Designed a multiplayer word game where players form words from random letters in a limited time.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="modal-doc-reviewer" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h5>Two-Module Document Reviewer Website <span class="project-duration">Nov – Dec 2023</span></h5>
-      <p><em>Project Lead</em></p>
-      <ul>
-        <li>Developed back-end PHP scripts for document management.</li>
-        <li>Implemented API-powered PDF viewer with comments.</li>
-        <li>Built Node.js backend modules for extended functionality.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="modal-outage-analysis" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h5>Power Outage Data Analysis Programs <span class="project-duration">Nov 2023</span></h5>
-      <p><em>Project Lead</em></p>
-      <ul>
-        <li>Utilized R to analyze power outage data (June–August 2023).</li>
-        <li>Generated visualizations for interpretation and reporting.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="modal-lol-assistant" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h5>Coaching & Analysis Assistant for League of Legends (LSTM) <span class="project-duration">Nov 2023</span></h5>
-      <p><em>Project Lead</em></p>
-      <ul>
-        <li>Developed Python program to predict professional LoL match outcomes.</li>
-        <li>Trained LSTM model on 2019–2023 competitive data across multiple metrics.</li>
-      </ul>
-    </div>
-  </div>
 </template>

@@ -1,19 +1,24 @@
 <template id="gallery-template">
-  <section class="section-content p-4">
-    <div class="gallery-layout">
-<h3 class="section-title">GALLERY</h3>
-  <div class="gallery-container">
-    <div class="main-carousel">
-      <button class="carousel-btn prev">&#10094;</button>
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
+    <section class="section-content p-4">
+        <div class="gallery-layout">
+            <h3 class="section-title">GALLERY</h3>
 
-    <div class="album-scroller">
-      <div class="thumbs">
-      </div>
-    </div>
-  </div>
-    </div>
-  
-</section>
+            <div class="gallery-container">
+                <div class="main-carousel">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+
+                <div class="album-scroller">
+                    <div class="thumbs"></div>
+                </div>
+            </div>
+        </div>
+        <div id="image-modal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <img src="" alt="Full Image" id="modal-img" />
+            </div>
+        </div>
+    </section>
 </template>

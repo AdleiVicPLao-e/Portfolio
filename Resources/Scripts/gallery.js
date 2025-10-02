@@ -17,7 +17,6 @@ function initGallerySection(container) {
     let currentIndex = 0;
     let interval;
 
-    // build main images
     const imgs = images.map((src, i) => {
         const img = document.createElement("img");
         img.src = src;
@@ -33,7 +32,6 @@ function initGallerySection(container) {
         return img;
     });
 
-    // build thumbs
     images.forEach(src => {
         const thumb = document.createElement("img");
         thumb.classList.add("thumb");
@@ -49,7 +47,7 @@ function initGallerySection(container) {
         const thumbsCount = thumbsArray.length;
         const isMobile = window.innerWidth <= 767;
 
-        const spacing = 90;   // spacing between thumbs
+        const spacing = 90; // spacing between thumbs
         const depthStep = 40; // depth for 3D
         const rotateStep = 30; // rotation angle
 
@@ -136,7 +134,6 @@ function initGallerySection(container) {
     prevBtn?.addEventListener("click", () => setActive(currentIndex - 1, -1));
     nextBtn?.addEventListener("click", () => setActive(currentIndex + 1, 1));
 
-    // auto slide
     const startAutoSlide = () => {
         stopAutoSlide();
         interval = setInterval(() => setActive(currentIndex + 1, 1), 4000);
@@ -148,7 +145,30 @@ function initGallerySection(container) {
         el.addEventListener("mouseleave", startAutoSlide);
     });
 
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    const modalClose = modal.querySelector(".modal-close");
+
+    imgs.forEach(img => {
+        img.addEventListener("click", () => {
+            modalImg.src = img.src;
+            modal.classList.add("active");
+        });
+    });
+
+    modalClose.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", e => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+
+
     startAutoSlide();
 
     window.addEventListener('resize', () => location.reload());
+
 }

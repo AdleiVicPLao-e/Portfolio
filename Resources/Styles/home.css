@@ -1,151 +1,162 @@
 .home-section {
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  min-height: 100vh;
-  padding: clamp(10px, 4vw, 10px);
-  gap: clamp(10px, 4vw, 10px);
-  text-align: center;
-  box-sizing: border-box;
-  margin-top: 45px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    padding: clamp(10px, 4vw, 10px);
+    gap: clamp(10px, 4vw, 10px);
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 45px;
 }
 
 .profile-container {
-  perspective: 1200px;
-  width: min(18vw, 220px);  
-  height: min(18vw, 220px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    perspective: 1200px;
+    width: min(18vw, 220px);
+    height: min(18vw, 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .coin {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .coin img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  backface-visibility: hidden;
-  border: 3px solid var(--bg-lightest);
-  object-fit: cover;
-  top: 0;
-  left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    border: 3px solid var(--bg-lightest);
+    object-fit: cover;
+    top: 0;
+    left: 0;
 }
 
 .coin .back {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .home-text {
-  max-width: clamp(280px, 55%, 850px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(10px, 1.8vw, 10px);
-  margin-top: clamp(10px, 3vw, 10px);
-  z-index: 1;
+    max-width: clamp(280px, 55%, 850px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 1.8vw, 10px);
+    margin-top: clamp(10px, 3vw, 10px);
+    z-index: 1;
 }
 
 .home-text h1 {
-  font-size: clamp(1.6rem, 3.5vw, 3rem);
-  margin-bottom: clamp(5px, 1.2vw, 5px);
-  color: var(--text-darkest);
+    font-size: clamp(1.6rem, 3.5vw, 3rem);
+    margin-bottom: clamp(5px, 1.2vw, 5px);
+    color: var(--text-darkest);
 }
 
 .home-text h2 {
-  font-size: clamp(0.95rem, 2.2vw, 1.8rem);
-  color: var(--text-dark);
-  font-weight: 500;
-  margin-bottom: clamp(5px, 0.8vw, 5px);
+    font-size: clamp(0.95rem, 2.2vw, 1.8rem);
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: clamp(5px, 0.8vw, 5px);
 }
 
 .home-text p {
-  font-size: clamp(0.85rem, 1.4vw, 1.3rem);
-  margin-bottom: clamp(5px, 1.8vw, 5px);
-  color: var(--text-darkest);
+    font-size: clamp(0.85rem, 1.4vw, 1.3rem);
+    margin-bottom: clamp(5px, 1.8vw, 5px);
+    color: var(--text-darkest);
 }
 
 .home-text .btn {
-  margin: clamp(1px, 0.8vw, 3px);
-  padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2.5vw, 15px);
-  border-radius: 30px;
-  background: var(--bg-dark);
-  color: var(--text-lightest);
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+    margin: clamp(1px, 0.8vw, 3px);
+    padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2.5vw, 15px);
+    border-radius: 30px;
+    background: var(--bg-dark);
+    color: var(--text-lightest);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
 .home-text .btn:hover {
-  background: var(--bg-darkest);
-  color: var(--text-lightest);
+    background: var(--bg-darkest);
+    color: var(--text-lightest);
 }
 
 @keyframes coinFlip {
-  0% { transform: rotateY(0deg); }
-  20% { transform: rotateY(720deg); }
-  60% { transform: rotateY(1440deg); }
-  100% { transform: rotateY(1800deg); }
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    20% {
+        transform: rotateY(720deg);
+    }
+
+    60% {
+        transform: rotateY(1440deg);
+    }
+
+    100% {
+        transform: rotateY(1800deg);
+    }
 }
 
 @media (min-width: 1600px) {
-  .home-section {
-    padding: 60px;
-    gap: 45px;
-  }
+    .home-section {
+        padding: 60px;
+        gap: 45px;
+    }
 
-  .profile-container {
-    width: 20vw;
-    height: 20vw;
-  }
+    .profile-container {
+        width: 20vw;
+        height: 20vw;
+    }
 
-  .home-text h1 {
-    font-size: 3.5rem;
-    color: var(--text-lightest);
-  }
+    .home-text h1 {
+        font-size: 3.5rem;
+        color: var(--text-lightest);
+    }
 
-  .home-text h2 {
-    font-size: 2rem;
-    color: var(--text-light);
-  }
+    .home-text h2 {
+        font-size: 2rem;
+        color: var(--text-light);
+    }
 
-  .home-text p {
-    font-size: 1.5rem;
-    color: var(--text-lightest);
-  }
+    .home-text p {
+        font-size: 1.5rem;
+        color: var(--text-lightest);
+    }
 }
 
 @media (max-width: 767px) {
-  .profile-container {
-    width: 100px;
-    height: 100px;
-  }
+    .profile-container {
+        width: 100px;
+        height: 100px;
+    }
 
-  .home-text h1 {
-    font-size: 1.3rem;
-    color: var(--text-lightest);
-  }
+    .home-text h1 {
+        font-size: 1.3rem;
+        color: var(--text-lightest);
+    }
 
-  .home-text h2 {
-    font-size: 0.9rem;
-    color: var(--text-light);
-  }
+    .home-text h2 {
+        font-size: 0.9rem;
+        color: var(--text-light);
+    }
 
-  .home-text p {
-    font-size: 0.8rem;
-    color: var(--text-lightest);
-  }
+    .home-text p {
+        font-size: 0.8rem;
+        color: var(--text-lightest);
+    }
 }

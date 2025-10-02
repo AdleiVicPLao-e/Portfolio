@@ -22,17 +22,24 @@
     width: 100%;
     max-width: 1200px;
 
-    height: 60vh;              /* scale with screen height */
-    min-height: 350px;         /* safety floor */
-    max-height: 500px;         /* optional cap */
+    height: 60vh;
+    /* scale with screen height */
+    min-height: 350px;
+    /* safety floor */
+    max-height: 500px;
+    /* optional cap */
 }
 
 .main-carousel {
     position: relative;
-    flex: 1 1 auto;                /* allow flexible growth */
-    width: 60%;                    /* scales with screen size */
-    max-width: 800px;              /* don’t let it grow too big */
-    min-width: 400px;              /* don’t shrink too much */
+    flex: 1 1 auto;
+    /* allow flexible growth */
+    width: 60%;
+    /* scales with screen size */
+    max-width: 800px;
+    /* don’t let it grow too big */
+    min-width: 400px;
+    /* don’t shrink too much */
     height: 100%;
     overflow: hidden;
     border-radius: 8px;
@@ -43,7 +50,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;                   /* responsive scaling */
+    width: 100%;
+    /* responsive scaling */
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
@@ -60,27 +68,34 @@
     padding: 12px;
     font-size: 28px;
     cursor: pointer;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     color: var(--text-lightest);
     z-index: 20;
     transition: background 0.3s, transform 0.2s;
 }
 
 .carousel-btn:hover {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
 
 /* ---------- Album Scroller (Desktop) ---------- */
 .album-scroller {
     position: relative;
-    flex: 0 1 25%;              /* take about 1/4 width */
+    flex: 0 1 25%;
+    /* take about 1/4 width */
     max-width: 280px;
     min-width: 160px;
-    height: 100%;               /* matches gallery-container height */
+    height: 100%;
+    /* matches gallery-container height */
     overflow: hidden;
     perspective: 1200px;
     display: flex;
@@ -99,8 +114,10 @@
 }
 
 .thumb {
-    width: 120px;               /* fixed width so they don’t collapse */
-    height: 80px;               /* fixed height instead of aspect-ratio */
+    width: 120px;
+    /* fixed width so they don’t collapse */
+    height: 80px;
+    /* fixed height instead of aspect-ratio */
     margin: 6px 0;
     border: 2px solid var(--bg-lightest);
     border-radius: 6px;
@@ -108,7 +125,8 @@
     object-fit: cover;
     opacity: 0.5;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    background: var(--bg-light); /* fallback if image fails */
+    background: var(--bg-light);
+    /* fallback if image fails */
 }
 
 .thumb.active {
@@ -122,6 +140,57 @@
     filter: brightness(1.05);
     border-color: var(--accent-2);
 }
+
+/* ---------- Modal ---------- */
+#image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* semi-transparent dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 10px;
+    /* small padding for mobile */
+}
+
+#image-modal.active {
+    display: flex;
+}
+
+#image-modal .modal-content {
+    position: relative;
+    max-width: 90vw;
+    /* 90% of viewport width */
+    max-height: 90vh;
+    /* 90% of viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-modal img#modal-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* preserves aspect ratio without cutting */
+    border-radius: 12px;
+}
+
+/* Close button */
+#image-modal .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
 
 /* ---------- Mobile Adjustments ---------- */
 @media (max-width: 767px) {
@@ -180,5 +249,24 @@
 
     .thumb.active {
         transform: scale(1.1) translateZ(40px);
+    }
+
+    #image-modal {
+        padding: 5px;
+        /* smaller padding */
+    }
+
+    #image-modal .modal-content {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    #image-modal img#modal-img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #image-modal .modal-close {
+        font-size: 1.8rem;
     }
 }

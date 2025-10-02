@@ -29,30 +29,28 @@
 
 
 <div id="gameScreen" class="screen hidden">
+  <img id="roundBackground" class="round-bg" src="" alt="Background">
+    <div id="congratsOverlay" class="hidden">
+    <img id="congratsImage" src="" alt="Congrats">
+  </div>
   <div id="enemyHP" class="enemy-hp-container"></div>
 
   <div class="game-ui">
-    <h2>Make a Word!</h2>
-    <div id="roundInfo">
-      <span id="roundCounter">Round: 1</span> | 
-      <span id="timer">Time Left: 30s</span>
-    </div>
 
     <div id="letterPool"></div>
-    
     <div id="selectedWord"></div>
 
     <div class="game-buttons">
       <button id="submitBtn" disabled>Submit</button>
-      <button id="resetBtn">Reset</button>
     </div>
   </div>
 
+  <div id="roundInfo">
+      <span id="roundCounter">Round: 1</span> | 
+      <span id="timer">Time Left: 30s</span>
+    </div>
+
   <div id="playerHP" class="player-hp-container"></div>
-</div>
-
-
-  <img id="roundBackground" class="round-bg" src="" alt="Background">
   <img id="slashEffect" class="slash hidden" src="" alt="Slash Effect">
 </div>
 
