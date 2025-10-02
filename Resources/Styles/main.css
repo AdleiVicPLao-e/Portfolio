@@ -459,7 +459,7 @@ footer {
         color: var(--text-lightest);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         font-size: clamp(1.2rem, 5vw, 1.5rem);
-    }
+    }   
 
     footer {
         background-color: var(--bg-lightest);
@@ -468,8 +468,5 @@ footer {
         padding: clamp(8px, 2vw, 12px);
     }
 
-    * {
-        background-color: transparent;
-        color: inherit;
-    }
+    
 }
