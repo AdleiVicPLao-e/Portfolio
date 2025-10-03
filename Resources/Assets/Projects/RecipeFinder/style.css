@@ -1,0 +1,410 @@
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Glacial Indifference", Arial, sans-serif;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+/* ---------- Backgrounds ---------- */
+body {
+  background: url(Images/background-image2.png) no-repeat center/cover fixed;
+}
+.body-page {
+  background: url(Images/background-image.png) no-repeat center/cover fixed;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background-color: #E1B264;
+  z-index: 1000;
+}
+header img { width: 75px; }
+
+#menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 15px;
+  padding: 10px 25px;
+  transition: background 0.3s;
+}
+nav ul li:not(.selected-header-button):hover {
+  background: #BFE199;
+}
+.header-button {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #E1B264;
+  height: 50px;
+  padding: 10px;
+}
+
+/* ---------- Main ---------- */
+main {
+  padding-top: 120px; /* space for fixed header */
+}
+.main-index {
+  background: rgba(255,255,255,0.5);
+  border-radius: 40px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1260px;
+}
+
+/* ---------- Hero Text ---------- */
+#ill-cook { width: 100%; margin-bottom: 20px; }
+#first-line, #second-line {
+  color: #833f3f;
+  font-family: "Allura";
+  font-size: 50px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* ---------- Finder Button ---------- */
+#finder-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#finder-button a {
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px 40px;
+  font-size: 30px;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+#finder-button a:hover {
+  background: #A1C876;
+  border: 1px solid #516b36;
+}
+
+/* ---------- Content Blocks ---------- */
+.block, .recipe-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.content-block {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: left;
+}
+
+/* ---------- Ingredients ---------- */
+.content-block h2 {
+  color: #333;   /* FIX: titles visible */
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.ingredient {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #a5a5a5;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.ingredient:hover {
+  background: #BFE199;
+  border-color: transparent;
+}
+
+/* ---------- Controls Bar (search + clear + find) ---------- */
+.controls-bar {
+  position: sticky;
+  top: 100px; /* sits below fixed header */
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  z-index: 1000;
+}
+
+.controls-bar form {
+  flex: 1;
+}
+
+.controls-bar input[type="search"] {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.controls-bar button,
+.controls-bar a{
+  background: #E1B264;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+.controls-bar button:hover,
+.controls-bar a:hover {
+  background: #BFE199;
+}
+
+/* ---------- Chosen Ingredients (floating area) ---------- */
+.chosen-ones {
+  position: sticky;
+  top: 160px; /* sticks below controls-bar */
+  background: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  z-index: 950;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chosen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.chosen-ingr {
+  background: #fff;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;   /* switched to black text */
+  cursor: pointer;
+  transition: 0.3s;
+}
+.chosen .ingredient:hover {
+  background: #BFE199;
+  border-color: transparent;
+}
+
+/* ---------- Mobile Adjustment ---------- */
+@media (max-width: 480px) {
+  .controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .controls-bar button,
+  .controls-bar a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chosen-ones {
+    position: relative; /* don't force sticky on mobile */
+    top: auto;
+  }
+}
+
+#reco {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+/* ---------- Recipe Cards ---------- */
+.recipe {
+  background: rgba(255,255,255,0.75);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  max-width: 1000px;
+  width: 100%;
+}
+.recipe-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.recipe-image img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: dashed 2px #678149;
+}
+.recipe-info h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.recipe-info li {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.recipe-info .ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- About & Category ---------- */
+.about-header, .category-desc {
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.5);
+}
+.about-content, .category-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ---------- Forms & Search ---------- */
+#search-box {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+#search { width: 100px; }
+
+/* ---------- Floating Buttons ---------- */
+.floating-button {
+  position: fixed;
+  bottom: 20px; left: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: lightblue;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.floating-button:hover { background: #0078d4; }
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Allura";
+  src: url(Fonts/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "Glacial Indifference";
+  src: url(Fonts/GlacialIndifference-Regular.otf);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+  header img { width: 50px; }
+
+  #menu-icon {
+    display: block;
+    color: #000;
+  }
+
+  nav ul {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #E1B264;
+    position: absolute;
+    top: 60px; /* under header */
+    right: 10px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex; /* show when toggled */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .main-index {
+    margin: 100px 10px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  #first-line, #second-line { font-size: 24px; }
+  #finder-button a { font-size: 18px; padding: 10px 20px; }
+  .content-block { width: 95%; padding: 10px; }
+
+  /* stack recipe cards */
+  .recipe-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .recipe-image img {
+    margin: 0 auto;
+  }
+  .recipe-info { align-items: center; }
+  .recipe-info .ingredients { justify-content: center; }
+  
+  .about-content, .category-block {
+    flex-direction: column;
+    align-items: center;
+  }
+}

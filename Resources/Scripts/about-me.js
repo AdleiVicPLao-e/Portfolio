@@ -6,17 +6,17 @@ function initAboutMeSection(container) {
     const closeBtn = modal.querySelector(".modal-close");
 
     const skillProjects = {
-        Java: `<iframe src="./Resources/Assets/Projects/java/wordy.html" 
-        style="border:none;width:100%;height:100%;"></iframe>`,
+        Java: `<iframe src="./Resources/Assets/Projects/java/wordy.html"></iframe>`,
 
-        JavaScript: `<iframe src="./Resources/Assets/Projects/tetris/tetris.html" 
-        style="border:none;width:100%;height:100%;"></iframe>`,
+        JavaScript: `<iframe src="./Resources/Assets/Projects/tetris/tetris.html"></iframe>`,
 
         HTML: `<h2>HTML</h2><p>Portfolio landing page built with HTML5.</p>`,
 
-        CSS: `<h2>CSS</h2><p>Custom responsive design using Flexbox and Grid.</p>`,
+        CSS: `<iframe src="./Resources/Assets/Projects/RecipeFinder/index.html"></iframe>`,
 
         Python: `<h2>Python</h2><p>Data analysis project using Pandas & Matplotlib.</p>`,
+
+        PHP: `<h2>PHP</h2><p>Simple blog platform with user authentication.</p>`,
 
         MySql: `<h2>MySQL</h2><p>Normalized e-commerce database schema design.</p>`,
 

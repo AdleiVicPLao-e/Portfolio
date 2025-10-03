@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'll Cook: Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Images/logo-favicon.png" type="image/x-icon">
+    <script src="recipeFinder.js"></script>
+  </head>
+
+  <body>
+    <header>
+  <img src="Images/logo.png" alt="I'll Cook Logo">
+
+  <!-- Hamburger icon -->
+  <div id="menu-icon">&#9776;</div>
+
+  <nav>
+    <ul id="nav-list">
+      <li><a href="index.html" class="header-button">Home</a></li>
+      <li><a href="category.html" class="header-button">Category Description</a></li>
+      <li><a href="about.html" class="header-button">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <main>
+      <hand>
+  <div class="block">
+    <div class="content-block">
+      <!-- empty placeholder block -->
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <form id="search-ingr" action="/search" method="get">
+        <input type="search" id="search-b" name="q" placeholder="Search ingredient here">
+      </form>
+
+      <button class="clear-all">Clear All</button>
+
+      <a href="recipe-finder-a.html?find=true" id="find">Look for Recipes</a>
+    </div>
+
+    <!-- Chosen Ingredients -->
+    <div class="chosen-ones">
+      <div class="chosen">
+        <!-- selected ingredients will show here -->
+      </div>
+    </div>
+  </div>
+</hand>
+    </main>
+  </body>
+</html>

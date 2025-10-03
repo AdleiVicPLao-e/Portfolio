@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'll Cook: Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Images/logo-favicon.png" type="image/x-icon">
+
+    <script src="recipeFinder.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="Images/logo.png" alt="I'll Cook Logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="header-button">Home</a></li>
+                <li  class="selected-header-button header-button">Category Description</li>
+                <li><a href="about.html" class="header-button">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger icon -->
+        <div id="menu-icon">&#9776;</div>
+    </header>
+
+    <main>
+        <div class="block">
+            <div class="category-block">
+                <form id="search-form" action="/search" method="get">
+                    <input type="search" id="search-box" name="q" placeholder="Search category here">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
