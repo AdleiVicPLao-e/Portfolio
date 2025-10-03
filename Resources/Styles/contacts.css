@@ -58,7 +58,6 @@
     color: var(--text-darkest);
 }
 
-/* Responsive adjustments */
 @media (max-width: 767px) {
     .section-title {
         font-size: 1.6rem;
