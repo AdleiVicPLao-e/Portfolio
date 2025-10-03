@@ -14,7 +14,7 @@ function initAboutMeSection(container) {
 
         CSS: `<iframe src="./Resources/Assets/Projects/RecipeFinder/index.html"></iframe>`,
 
-        Python: `<h2>Python</h2><p>Data analysis project using Pandas & Matplotlib.</p>`,
+        Python: `<iframe src="https://colab.research.google.com/drive/13rew7W0QPOPs4Fu5qKG85CN3--3i3idv?usp=sharing"></iframe>`,
 
         PHP: `<h2>PHP</h2><p>Simple blog platform with user authentication.</p>`,
 
