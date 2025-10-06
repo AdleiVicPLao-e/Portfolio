@@ -23,65 +23,73 @@ body {
 }
 
 /* HEADER */
-
-.logo-image {
-    position: absolute;
-    margin-top: 5px;
-    padding-left: 30px;
-}
-
-.logo-image .title {
-    color: white;
-    margin: 0;
-    display: inline;
-}
-
-.img-fluid {
-    width: 50px;
-    height: 50px;
-    border-radius: 40px;
-    border: 5px black;
-    vertical-align: middle;
-}
-
 .header {
     width: 100%;
     background: #143873;
     top: 0;
     overflow: hidden;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* logo left, nav right */
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    box-sizing: border-box;
 }
 
+/* LOGO */
+.logo-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    border: 3px solid black;
+}
+
+/* LOGO TITLE */
+.logo-image .title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* NAVIGATION */
 .navUl {
+    display: flex; /* horizontal layout */
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.navText {
-    width: 100px;
-    padding: 20px;
-    display: block;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
+    gap: 20px; /* spacing between nav items */
 }
 
 .navItem {
-    display: inline-block;
+    display: block;
+}
+
+.navText {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
 }
 
 .navText:hover {
     color: #64a39d;
-    transition: color 0.5s;
     cursor: pointer;
 }
 
 .navText:active {
     opacity: 0.7;
 }
+
 
 /* SECTION 1 HOME/INTRO */
 
