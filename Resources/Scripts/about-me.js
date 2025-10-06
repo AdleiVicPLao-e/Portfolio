@@ -16,8 +16,6 @@ function initAboutMeSection(container) {
 
         Python: `<iframe src="./Resources/Assets/Projects/python/python.html"></iframe>`,
 
-        PHP: `<h2>PHP</h2><p>Simple blog platform with user authentication.</p>`,
-
         MySql: `<h2>MySQL</h2><p>Normalized e-commerce database schema design.</p>`,
 
         R: `<iframe src="./Resources/Assets/Projects/r/r.html"></iframe>`,
