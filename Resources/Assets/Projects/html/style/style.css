@@ -1,0 +1,732 @@
+/* HTML */
+
+@font-face {
+    font-family: PublicSans;
+    src: url("/res/fonts/PublicSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: Monsterrat;
+    src: url("/res/fonts/Montserrat-Regular.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-family: PublicSans, serif;
+    text-align: center;
+    position: absolute;
+}
+
+/* HEADER */
+
+.logo-image {
+    position: absolute;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+
+.logo-image .title {
+    color: white;
+    margin: 0;
+    display: inline;
+}
+
+.img-fluid {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    border: 5px black;
+    vertical-align: middle;
+}
+
+.header {
+    width: 100%;
+    background: #143873;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+.navUl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.navText {
+    width: 100px;
+    padding: 20px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navItem {
+    display: inline-block;
+}
+
+.navText:hover {
+    color: #64a39d;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+.navText:active {
+    opacity: 0.7;
+}
+
+/* SECTION 1 HOME/INTRO */
+
+#section1 {
+    padding-top: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.safety-filler{
+    width: 60%;
+    border-radius: 20px;
+}
+.filler{
+    float: left;
+    display: inline;
+    margin-right: 15px;
+    border-radius: 20px;
+}
+#section1 h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: PublicSans, serif;
+}
+
+.intro p {
+    font-size: 20px;
+    text-align: justify;
+}
+.content p{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* SECTION 2 SAFETY */
+
+#section2 {
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+#section2 h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+#section2 p {
+    font-size: 20px;
+    text-align: left;
+}
+
+.image32 {
+    width: 80%;
+    height: 80%;
+}
+
+.main_container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.importance1, .importance2 {
+    display: flex;
+    background-color: #143873;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+
+.main_container:hover .overlay {
+    transform: scaleY(1);
+}
+
+.overlay h1 {
+    color: white;
+    padding-top: 20px;
+}
+
+.overlay h2 {
+    color: white;
+    margin: 0;
+    padding: 10px 20px 20px;
+    text-align: left;
+}
+
+.container3:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container3 .col {
+    margin: 2%;
+}
+
+.con1-icon {
+    width: 60px;
+    margin: 0 10px;
+    max-height: 120px;
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1 .tab {
+    width: 100%;
+    padding: 20px;
+    background: #143873;
+    order: 1;
+    display: none;
+    color: white;
+}
+
+.container1 label:hover {
+    background: #77b5d9;
+    transition: color 1s;
+    cursor: pointer;
+}
+
+.container1 label:active {
+    opacity: 0.7;
+}
+
+.container1 label {
+    padding: 25px;
+    background: gray;
+    font-weight: bold;
+    color: white;
+}
+
+.container1 input[type="radio"] {
+    display: none;
+}
+
+.container1 input[type = 'radio']:checked + label + .tab {
+    display: block;
+}
+
+.container1 input[type = 'radio']:checked + label {
+    background: #143873;
+}
+
+.columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: justify;
+    margin: 50px 0;
+}
+
+.column {
+    flex: 1;
+    border: 10px solid #666;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.col {
+    float: left;
+    margin: 2%;
+    width: 45%;
+}
+
+/* SECTION 3 STATISTICS */
+
+#section3 {
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+#section3 h1 {
+    font-size: 40px;
+}
+.about-us{
+    margin-left: 20px;
+}
+
+#section3 p {
+    font-size: 20px;
+    text-align: left;
+}
+
+.chart {
+    margin: auto;
+    padding-bottom: 50px;
+    width: 600px;
+    height: 300px;
+    display: block;
+}
+
+.nums {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+}
+
+.nums li {
+    list-style: none;
+    height: 150px;
+    position: relative;
+    bottom: 145px;
+    color: black;
+}
+
+.nums span {
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.bars {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    background: #555;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0 10px 0 #555;
+    border-radius: 5px;
+}
+
+.bars li {
+    display: table-cell;
+    width: 100px;
+    height: 300px;
+    position: relative;
+}
+
+.bars span {
+    color: black;
+    position: absolute;
+    bottom: -35px;
+    left: 10px;
+}
+
+.bars .bar {
+    display: block;
+    background: #77b5d9;
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 25px;
+    text-align: center;
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+
+.bars .bar:hover {
+    background: lightblue;
+    box-shadow: 0 0 10px 0 lightblue;
+    cursor: pointer;
+}
+
+.bars .bar::before {
+    content: attr(data-percentage);
+    position: relative;
+    bottom: 20px;
+}
+
+/* SECTION 4 ABOUT US */
+.about {
+    padding-top: 50px;
+}
+.section4 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+.section4 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100%;
+    background: radial-gradient(#777,#222);
+}
+.team_member {
+    position: relative;
+    width: 340px;
+    height: 450px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+}
+.team_member .imageBox {
+    position: absolute;
+    top: -190px;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translateX(-50%);
+    clip-path: circle(50%);
+}
+.team_member .imageBox::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -16px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 20px lightblue;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+}
+.imageBox .member_image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 310px;
+}
+.member_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.member_image img:hover {
+    transform: scale(1.2);
+}
+.team_member .about_member {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    padding: 20px 30px;
+}
+
+.about_member h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 7px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.role h4 {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 736px) and (orientation: portrait) {
+
+    html {
+        background: #143873;
+    }
+    body {
+        font-family: Monsterrat, sans-serif;
+        color: white;
+    }
+
+    /* HEADER */
+    .header {
+        background: #77b5d9;
+    }
+
+    .navText {
+        font-size: 18px;
+        color: #143873;
+    }
+
+    .navText:hover {
+        color: white;
+        transition: color 0.5s;
+        cursor: pointer;
+    }
+
+    /* SECTION 1 HOME */
+    .safety-filler{
+        width: 100%;
+    }
+    #section1 h1 {
+        font-family: Monsterrat, sans-serif;
+        font-size: 40px;
+        color: #77b5d9;
+    }
+    .content{
+        font-size: 15px;
+    }
+    .intro{
+        font-size: 15px;
+    }
+
+    /* SECTION 2 SAFETY */
+    #section2 h1 {
+        font-family: Monsterrat, sans-serif;
+        font-size: 50px;
+        color: #77b5d9;
+    }
+
+    #section2 h2 {
+        font-family: Monsterrat, sans-serif;
+        font-size: 40px;
+        text-align: center;
+        color: white;
+    }
+
+    #section2 p {
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    .col p{
+        font-size: 15px;
+    }
+
+    .main_container {
+        width: 80%;
+    }
+
+    .image32 {
+        height: 70%;
+        width: 70%;
+        margin: 10% auto;
+    }
+
+    .importance1,
+    .importance2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overlay h1,
+    .overlay h2 {
+        transform: none;
+        padding: 15px;
+    }
+
+    .container1 label:hover {
+        background: lightblue;
+        transition: color 1s;
+        cursor: pointer;
+    }
+
+    .container1 label:active {
+        opacity: 0.7;
+    }
+
+    .container1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container1 input[type="radio"] {
+        display: none;
+    }
+
+    .container1 label {
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px;
+        background: lightgray;
+        font-weight: bold;
+        color: black;
+        font-size: 20px;
+    }
+
+    .container1 .tab {
+        font-size: 15px;
+        width: 100%;
+        padding: 20px;
+        background: black;
+        border-radius: 10px;
+        order: 1;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .container1 input[type = 'radio']:checked + label + .tab {
+        display: block;
+    }
+
+    .container1 input[type = 'radio']:checked + label {
+        background: black;
+        color: white;
+    }
+
+    .container3 p {
+        font-size: 20px;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    /* SECTION 3 STATISTICS */
+    #section3 h1 {
+        font-size: 40px;
+        color: #77b5d9;
+    }
+    #section3{
+        padding-bottom: 30px;
+    }
+
+    #section3 p {
+        text-align: justify;
+        padding-top: 50px;
+        font-size: 15px;
+    }
+
+    #section3 .chart{
+        width: 100%;
+    }
+
+    #section3 .bars{
+        font-size: 20px;
+    }
+
+    #section3 .nums span {
+        font-size: 20px;
+        color: white;
+    }
+
+    #section3 .bars span {
+        bottom: -80px;
+        font-size: 20px;
+        color: white;
+    }
+
+    /* SECTION 4 ABOUT US */
+.about{
+    padding-top: 50px;
+}
+.section4 {
+    
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100%;
+    background: radial-gradient(#777,#222);
+}
+.team_member {
+    position: relative;
+    width: 340px;
+    height: 450px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+}
+.team_member .imageBox {
+    position: absolute;
+    top: -190px;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translateX(-50%);
+    clip-path: circle(50%);
+}
+.team_member .imageBox::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -16px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 20px lightblue;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+}
+.imageBox .member_image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 310px;
+}
+.member_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.member_image img:hover {
+    transform: scale(1.2);
+}
+.team_member .about_member {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    padding: 20px 30px;
+}
+
+.about_member h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 7px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.role h4 {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+}
