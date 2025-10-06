@@ -10,7 +10,7 @@ function initAboutMeSection(container) {
 
         JavaScript: `<iframe src="./Resources/Assets/Projects/tetris/tetris.html"></iframe>`,
 
-        HTML: `<h2>HTML</h2><p>Portfolio landing page built with HTML5.</p>`,
+        HTML: `<iframe src="./Resources/Assets/Projects/html/index.html"></iframe>`,
 
         CSS: `<iframe src="./Resources/Assets/Projects/RecipeFinder/index.html"></iframe>`,
 

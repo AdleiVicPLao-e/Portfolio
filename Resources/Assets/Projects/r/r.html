@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>webR Playground with Plots</title>
+  <title>CSV Analysis Simulation</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,113 +12,106 @@
     h2 {
       color: #333;
     }
-    textarea {
+    table {
       width: 100%;
-      height: 120px;
-      font-family: monospace;
-      font-size: 14px;
-    }
-    button {
+      border-collapse: collapse;
       margin-top: 10px;
-      padding: 8px 16px;
-      font-size: 14px;
-      cursor: pointer;
+      margin-bottom: 20px;
+      table-layout: fixed;
     }
-    pre {
-      background: #222;
-      color: #0f0;
-      padding: 10px;
-      border-radius: 6px;
-      white-space: pre-wrap;
-      margin-top: 15px;
-      min-height: 100px;
+    th, td {
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      text-align: left;
+      overflow: hidden;        
+      white-space: nowrap;      
+      text-overflow: ellipsis;  
+    }
+    th {
+      background: #eee;
+    }
+    .highlight {
+      background: #ffff99;
     }
     #plot img {
       margin-top: 15px;
       max-width: 100%;
       border: 1px solid #ccc;
     }
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
-  <h2>Run R Code with webR (Supports Plots)</h2>
-  
-  <textarea id="rcode">library(ggplot2)
-ggplot(mtcars, aes(x=hp, y=mpg)) +
-  geom_point(color="blue") +
-  theme_minimal()</textarea><br>
-  
-  <button id="run">Run R</button>
-  
-  <h3>Output:</h3>
-  <pre id="routput">Waiting for R code...</pre>
-  
+  <h2>Simulated CSV Analysis</h2>
+  <button id="start">Start Analysis</button>
+
+  <h3>Current Row:</h3>
+  <table id="csvTable">
+    <thead>
+      <tr id="tableHeaders"></tr>
+    </thead>
+    <tbody id="tableBody">
+      <tr id="currentRow"></tr>
+    </tbody>
+  </table>
+
+  <h3>Analysis Output:</h3>
   <div id="plot"></div>
 
-  <script type="module">
-    import { WebR } from "https://webr.r-wasm.org/latest/webr.mjs";
+  <script>
+    const csvFiles = ["august.csv", "june.csv", "july.csv"];
+    const tableHeaders = ["Date", "Location", "Time Started", "Time Restored", "Cause"];
+    
+    const tableHeadRow = document.getElementById("tableHeaders");
+    tableHeaders.forEach(h => {
+      const th = document.createElement("th");
+      th.textContent = h;
+      tableHeadRow.appendChild(th);
+    });
 
-    async function main() {
-      const webr = new WebR();
-      await webr.init();
+    const currentRow = document.getElementById("currentRow");
 
-      // Install ggplot2 (first run may take ~1 min to download)
-      await webr.installPackages(["ggplot2"]);
-
-      document.getElementById("run").onclick = async () => {
-        const code = document.getElementById("rcode").value;
-
-        try {
-          // Wrap code: save plot if a ggplot object is last
-          const wrappedCode = `
-            suppressMessages({
-              library(ggplot2)
-              result <- tryCatch({
-                ${code}
-              }, error=function(e) e)
-              if (inherits(result, "gg")) {
-                ggsave("plot.png", result, width=6, height=4, dpi=100)
-                "PLOT_SAVED"
-              } else {
-                capture.output(print(result))
-              }
-            })
-          `;
-
-          const result = await webr.evalR(wrappedCode);
-          const jsResult = await result.toArray();
-
-          const output = document.getElementById("routput");
-          output.textContent = "";
-
-          // If a plot was saved, render it
-          if (jsResult.includes("PLOT_SAVED")) {
-            const pngData = webr.FS.readFile("plot.png");
-            const blob = new Blob([pngData.buffer], { type: "image/png" });
-            const url = URL.createObjectURL(blob);
-
-            const img = document.createElement("img");
-            img.src = url;
-
-            const plotDiv = document.getElementById("plot");
-            plotDiv.innerHTML = ""; // clear old plot
-            plotDiv.appendChild(img);
-
-            output.textContent = "✅ Plot generated successfully!";
-          } else {
-            // Show text output
-            output.textContent = jsResult.join("\n") || "✅ Code ran successfully, no output.";
-            document.getElementById("plot").innerHTML = "";
-          }
-
-        } catch (err) {
-          document.getElementById("routput").textContent = "❌ Error: " + err.message;
-          console.error(err);
-        }
-      };
+    async function fetchCSV(file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      const rows = text.trim().split("\n").slice(1);
+      return rows.map(r => r.split(","));
     }
 
-    main();
+    async function simulateAnalysis() {
+      document.getElementById("start").disabled = true;
+      currentRow.innerHTML = "";
+      const allData = [];
+
+      for (const file of csvFiles) {
+        const rows = await fetchCSV(file);
+        allData.push(...rows);
+      }
+
+      for (let i = 0; i < allData.length; i++) {
+        currentRow.innerHTML = "";
+        allData[i].forEach(cell => {
+          const td = document.createElement("td");
+          td.textContent = cell;
+          currentRow.appendChild(td);
+        });
+        await new Promise(res => setTimeout(res, 5));
+      }
+
+      const plotDiv = document.getElementById("plot");
+      plotDiv.innerHTML = "";
+      const img = document.createElement("img");
+      img.src = "r.png";
+      img.alt = "Simulated R Plot";
+      plotDiv.appendChild(img);
+    }
+
+    document.getElementById("start").onclick = simulateAnalysis;
   </script>
 </body>
 </html>

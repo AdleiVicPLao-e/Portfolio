@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetPedia</title>
+    <link rel="icon" href="Images\logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="Images/logo1.png" alt="PetPedia Logo" class="logo" />
+      <nav class="navbar">
+  <ul class="nav-menu">
+    <li><a class="nav-button" href="#cats">Cats</a></li>
+    <li><a class="nav-button" href="#dogs">Dogs</a></li>
+    <li><a class="nav-button" href="about-us.html">About Us</a></li>
+  </ul>
+</nav>
+
+      <div class="hero">
+        <div class="container">
+          <h1 class="hero-title">
+            Welcome to <span style="color: #c10000">PetPedia</span>: Where Tails
+            Tell Tales
+          </h1>
+          <p class="hero-subtitle">
+            Join us in unraveling the enchanting universe of pets. From the
+            elegance of cats to the spirited energy of dogs, PetPedia is your
+            compass for discovery. Explore, learn, and immerse yourself in the
+            heartwarming stories and invaluable knowledge that make pet
+            ownership a joy.
+          </p>
+          <a href="about-us.html" class="btn btn-primary">Learn More</a>
+        </div>
+    </header>
+
+    <section id="cats" class="section">
+      <div class="container">
+        <section id="cat-facts" class="section">
+          <div class="container">
+            <h1 class="section-title">Cat Facts</h1>
+            <ol id="cat-facts-list"></ol>
+            <div class="button-container">
+              <button id="load-cat-facts" class="btn-large">
+                Load Cat Facts
+              </button>
+              <a href="cats.html" class="btn-large">Learn More About Cats</a>
+            </div>
+          </div>
+        </section>
+
+        <div id="cat-images" class="image-container"></div>
+      </div>
+    </section>
+    <hr class="section-divider" />
+    <section id="dogs" class="section">
+      <div class="container">
+        <section id="dog-facts" class="section">
+          <div class="container">
+            <h1 class="section-title">Dog Facts</h1>
+            <ol id="dog-facts-list"></ol>
+            <div class="button-container">
+              <button id="load-dog-facts" class="btn-large">
+                Load Dog Facts
+              </button>
+              <a href="dogs.html" class="btn-large">Learn More About Dogs</a>
+            </div>
+          </div>
+        </section>
+        <div id="dogs-images" class="image-container"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2023 PetPedia. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          loadCatFactsButton.click();
+        }, 1000);
+      });
+
+      function fetchCatFacts() {
+        const url = "https://catfact.ninja/facts?max_length=1000&limit=10";
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const catFactsList = document.getElementById("cat-facts-list");
+            catFactsList.innerHTML = "";
+
+            const facts = data.data.map((factData) => factData.fact);
+            shuffleArray(facts);
+
+            facts.forEach((fact) => {
+              const listItem = document.createElement("li");
+              listItem.textContent = fact;
+              catFactsList.appendChild(listItem);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching cat facts:", error);
+          });
+      }
+
+      const loadCatFactsButton = document.getElementById("load-cat-facts");
+      loadCatFactsButton.addEventListener("click", fetchCatFacts);
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          loadDogFactsButton.click();
+        }, 1000);
+      });
+
+      function fetchDogFacts() {
+        const url = "https://dogapi.dog/api/v2/facts";
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const dogFactsList = document.getElementById("dog-facts-list");
+            dogFactsList.innerHTML = "";
+
+            data.facts.forEach((fact) => {
+              const listItem = document.createElement("li");
+              listItem.textContent = fact;
+              dogFactsList.appendChild(listItem);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching dog facts:", error);
+          });
+      }
+
+      const loadDogFactsButton = document.getElementById("load-dog-facts");
+      loadDogFactsButton.addEventListener("click", fetchDogFacts);
+    </script>
+  </body>
+</html>
