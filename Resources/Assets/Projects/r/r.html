@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>webR Playground with Plots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      margin-top: 15px;
+      min-height: 100px;
+    }
+    #plot img {
+      margin-top: 15px;
+      max-width: 100%;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Run R Code with webR (Supports Plots)</h2>
+  
+  <textarea id="rcode">library(ggplot2)
+ggplot(mtcars, aes(x=hp, y=mpg)) +
+  geom_point(color="blue") +
+  theme_minimal()</textarea><br>
+  
+  <button id="run">Run R</button>
+  
+  <h3>Output:</h3>
+  <pre id="routput">Waiting for R code...</pre>
+  
+  <div id="plot"></div>
+
+  <script type="module">
+    import { WebR } from "https://webr.r-wasm.org/latest/webr.mjs";
+
+    async function main() {
+      const webr = new WebR();
+      await webr.init();
+
+      // Install ggplot2 (first run may take ~1 min to download)
+      await webr.installPackages(["ggplot2"]);
+
+      document.getElementById("run").onclick = async () => {
+        const code = document.getElementById("rcode").value;
+
+        try {
+          // Wrap code: save plot if a ggplot object is last
+          const wrappedCode = `
+            suppressMessages({
+              library(ggplot2)
+              result <- tryCatch({
+                ${code}
+              }, error=function(e) e)
+              if (inherits(result, "gg")) {
+                ggsave("plot.png", result, width=6, height=4, dpi=100)
+                "PLOT_SAVED"
+              } else {
+                capture.output(print(result))
+              }
+            })
+          `;
+
+          const result = await webr.evalR(wrappedCode);
+          const jsResult = await result.toArray();
+
+          const output = document.getElementById("routput");
+          output.textContent = "";
+
+          // If a plot was saved, render it
+          if (jsResult.includes("PLOT_SAVED")) {
+            const pngData = webr.FS.readFile("plot.png");
+            const blob = new Blob([pngData.buffer], { type: "image/png" });
+            const url = URL.createObjectURL(blob);
+
+            const img = document.createElement("img");
+            img.src = url;
+
+            const plotDiv = document.getElementById("plot");
+            plotDiv.innerHTML = ""; // clear old plot
+            plotDiv.appendChild(img);
+
+            output.textContent = "✅ Plot generated successfully!";
+          } else {
+            // Show text output
+            output.textContent = jsResult.join("\n") || "✅ Code ran successfully, no output.";
+            document.getElementById("plot").innerHTML = "";
+          }
+
+        } catch (err) {
+          document.getElementById("routput").textContent = "❌ Error: " + err.message;
+          console.error(err);
+        }
+      };
+    }
+
+    main();
+  </script>
+</body>
+</html>

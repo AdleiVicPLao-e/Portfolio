@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSV Viewer</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 50px; }
+  </style>
+</head>
+<body>
+  <h1>CSV Data Viewer</h1>
+
+  <h2>Uncleaned Worlds 2019</h2>
+  <table id="table2" class="display"></table>
+
+  <h2>Worlds 2019</h2>
+  <table id="table1" class="display"></table>
+
+  
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+  <script>
+    async function loadCSV(url) {
+      const response = await fetch(url);
+      const text = await response.text();
+      return text.split('\n').map(row => row.split(','));
+    }
+
+    async function initTable(tableId, csvFile) {
+      const data = await loadCSV(csvFile);
+      const headers = data[0].map(h => ({ title: h }));
+      const rows = data.slice(1);
+      $(`#${tableId}`).DataTable({
+        data: rows,
+        columns: headers,
+        pageLength: 10,
+        lengthMenu: [10, 25, 50, 100, 250, 500]
+      });
+    }
+
+    initTable('table2', 'uncleanedWorlds2019.csv');
+    initTable('table1', 'worlds2019.csv');
+  </script>
+</body>
+</html>

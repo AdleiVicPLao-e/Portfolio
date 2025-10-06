@@ -1,0 +1,523 @@
+Date,Location,Time Started,Time Restored,Cause
+07/01/2023,Sto. Tomas Proper,1:54 AM,2:20 AM,n/a
+07/01/2023,Dontogan,1:54 AM,2:20 AM,n/a
+07/01/2023,Sto. Tomas School Area,1:54 AM,2:20 AM,n/a
+07/01/2023,Sto. Tomas Proper,4:02 AM,6:46 AM,n/a
+07/01/2023,Dontogan,4:02 AM,6:46 AM,n/a
+07/01/2023,Sto. Tomas School Area,4:02 AM,6:46 AM,n/a
+07/01/2023,Upper Quirino-Magsaysay (Upper QM),5:36 AM,n/a,n/a
+07/01/2023,DPS Compound,6:26 AM,7:16 AM,n/a
+07/01/2023,Bal-Marcoville (Marcoville),6:26 AM,7:16 AM,n/a
+07/01/2023,Greenwater Village,6:26 AM,7:16 AM,n/a
+07/01/2023,Military Cut-Off,6:26 AM,7:16 AM,n/a
+07/01/2023,Santa Escolastica,6:26 AM,7:16 AM,n/a
+07/01/2023,Upper Dagsian,6:26 AM,7:16 AM,n/a
+07/01/2023,Lower Dagsian,6:26 AM,7:16 AM,n/a
+07/01/2023,Hillside,6:26 AM,7:16 AM,n/a
+07/01/2023,Gabriela Silang,6:26 AM,7:16 AM,n/a
+07/01/2023,Camp 8,6:26 AM,7:16 AM,n/a
+07/01/2023,Poliwes,6:26 AM,7:16 AM,n/a
+07/01/2023,San Vicente,6:26 AM,7:16 AM,n/a
+07/01/2023,Camp 7,6:26 AM,7:16 AM,n/a
+07/01/2023,Bakakeng North,6:26 AM,7:16 AM,n/a
+07/01/2023,SLU-SVP Housing Village,6:26 AM,7:16 AM,n/a
+07/01/2023,Cabinet Hill-Teacher's Camp,6:26 AM,7:16 AM,n/a
+07/01/2023,Irisan,7:51 AM,11:46 AM,Electrocuted Person 
+07/01/2023,Atok Trail,3:30 PM,n/a,To facilitate re-tapping of isolated loop jumper at structure 48
+07/01/2023,Kias,3:30 PM,n/a,To facilitate re-tapping of isolated loop jumper at structure 48
+07/01/2023,Fort del Pilar,3:30 PM,n/a,To facilitate re-tapping of isolated loop jumper at structure 48
+07/03/2023,Trancoville,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,Alfonso Tabora,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,South Sanitary Camp,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,A. Bonifacio-Caguioa-Rimando (ABCR),10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,Holy Ghost Proper,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,Upper General Luna,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,Kabayanihan,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,Session Road Area,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,Lower General Luna,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/03/2023,Salud Mitra,10:00 PM,n/a,Replacement of distribution transformer and installation of protective devices at Trancoville near U-Need Lumber
+07/02/2023,Military Cut-off,12:57 PM,2:03 PM,Replacement of Busted Fuse
+07/02/2023,Atok Trail,2:30 PM,n/a,To facilitate retapping of isolated loop jumper
+07/03/2023,Legarda-Burnham-Kisad,8:08 AM,8:59 AM,Electrocuted crow
+07/05/2023,Holy Ghost Proper,5:16 AM,7:05 AM,Vines on primary line near recloser
+07/05/2023,Upper General Luna,5:16 AM,7:05 AM,Vines on primary line near recloser
+07/05/2023,Lower General Luna,5:16 AM,7:05 AM,Vines on primary line near recloser
+07/05/2023,Session Road Area,5:16 AM,7:05 AM,Vines on primary line near recloser
+07/05/2023,Salud Mitra,5:16 AM,7:05 AM,Vines on primary line near recloser
+07/05/2023,North Sanitary Camp,8:43 AM,n/a,n/a
+07/05/2023,Trancoville,8:43 AM,n/a,n/a
+07/05/2023,Bayan Park West (Bayan Park and Leonila Hill),8:43 AM,n/a,n/a
+07/05/2023,Pacdal,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Mines View Park,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Gibraltar,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Pucsusan,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Lualhati,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Outlook Drive,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Lucnab,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,DPS Compound,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Bal-Marcoville (Marcoville),3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Greenwater Village,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Military Cut-Off,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Santa Escolastica,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Upper Dagsian,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Lower Dagsian,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Hillside,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Gabriela Silang,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Camp 8,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Poliwes,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,San Vicente,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Camp 7,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Bakakeng North,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,SLU-SVP Housing Village,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Outlook Drive,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,South Drive,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Country Club Village,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Happy Hollow,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Apugan-Loakan,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Scout Barrio,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Loakan Proper,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Liwanag-Loakan,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Atok Trail,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Camp 7,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Kias,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Fort Del Pilar,3:34 PM,4:31 PM,Tree branch fell on primary line
+07/05/2023,Dominican Hill-Mirador,4:39 PM,5:25 PM,Electrocuted crow
+07/06/2023,Session Road Area,1:54 AM,6:01 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Military Cut-Off,1:54 AM,6:01 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,BGH Compound,1:54 AM,6:01 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Phil-Am,1:54 AM,6:01 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Legarda-Burnham-Kisad,1:54 AM,6:01 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,North Sanitary Camp,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Bayan Park Village,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Ambiong,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,East Bayan Park,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Bayan Park West (Bayan Park and Leonila Hill),1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Aurora Hill Proper (Malvar-Sgt. Floresca),1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,North Central Aurora Hill,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,South Central Aurora Hill,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Lopez Jaena,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,San Antonio Village,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Brookspoint,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Trancoville,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,West Modern Site,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,East Modern Site,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Brookside,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Imelda Village,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,St. Joseph Village,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Holy Ghost Proper,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Holy Ghost Extension,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,New Lucban,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Teodora Alonzo,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,A. Bonifacio-Caguioa-Rimando (ABCR),1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Cabinet Hill-Teacher's Camp,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Engineers' Hill,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Malcolm Square-Perfecto (Jose Abad Santos),1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Harrison-Claudio Carantes,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Session Road Area,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,Military Cut-off,1:54 AM,6:15 AM,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,St. Joseph Village,1:54 AM,n/a,Collapsed tree on primary line near bridge at Leonard Wood road
+07/06/2023,St. Joseph Village,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Holy Ghost Extension,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Manuel A. Roxas,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Cabinet Hill-Teacher's Camp,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Upper General Luna,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Salud Mitra,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Engineers' Hill,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Session Road Area,8:09 AM,12:30 PM,Broken pole affected by collapsed tree at Leonard Wood Rd.
+07/06/2023,Session Road Area,11:22 AM,12:29 PM,Facilitate re-tapping of isolated primary jumper necessary for the energization of Feeder 5 (Broken pole due to fallen tree at Leonard Wood Rd.)
+07/06/2023,Military Cut-Off,11:22 AM,12:29 PM,Facilitate re-tapping of isolated primary jumper necessary for the energization of Feeder 5 (Broken pole due to fallen tree at Leonard Wood Rd.)
+07/06/2023,BGH Compound,11:22 AM,12:29 PM,Facilitate re-tapping of isolated primary jumper necessary for the energization of Feeder 5 (Broken pole due to fallen tree at Leonard Wood Rd.)
+07/06/2023,Phil-Am,11:22 AM,12:29 PM,Facilitate re-tapping of isolated primary jumper necessary for the energization of Feeder 5 (Broken pole due to fallen tree at Leonard Wood Rd.)
+07/06/2023,Legarda-Burnham-Kisad,11:22 AM,12:29 PM,Facilitate re-tapping of isolated primary jumper necessary for the energization of Feeder 5 (Broken pole due to fallen tree at Leonard Wood Rd.)
+07/06/2023,Asin Road,2:21 PM,2:30 PM,Facilitate change of transformer tap setting
+07/06/2023,Gibraltar,3:10 PM,6:04 PM,Replaced busted insulator and defective FCO
+07/07/2023,Camp 7,11:02 AM,n/a,n/a
+07/07/2023,Loakan Proper,11:22 AM,2:05 PM,Installation of guy wire and correction of entangled secondary lines
+07/07/2023,Liwanag-Loakan,11:22 AM,2:05 PM,Installation of guy wire and correction of entangled secondary lines
+07/07/2023,Andres Bonifacio (Lower Bokawkan),1:04 PM,n/a,Replacement of rotten secondary pole
+07/07/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),1:30 PM,2:10 PM,Fallen tree branch on primary line at Burnham Parking
+07/07/2023,Session Road Area,1:30 PM,2:10 PM,Fallen tree branch on primary line at Burnham Parking
+07/07/2023,Scout Barrio,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Loakan Proper,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Liwanag-Loakan,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Apugan-Loakan,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Atok Trail,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Kias,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Fort Del Pilar,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Greenwater Village,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Camp 7,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,Country Club Village,8:12 PM,9:24 PM,Ongoing removal of fallen tree
+07/07/2023,DPS Compound,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Bal-Marcoville (Marcoville),9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Greenwater Village,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Military Cut-Off,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Santa Escolastica,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Upper Dagsian,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Lower Dagsian,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Hillside,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Gabriela Silang,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Camp 8,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Poliwes,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,San Vicente,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Camp 7,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,Bakakeng North,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/07/2023,SLU-SVP Housing Village,9:26 PM,11:42 PM,Burnt FCO at Teacher's Camp
+07/08/2023,Cabinet Hill-Teacher's Camp,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,DPS Compound,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Bal-Marcoville (Marcoville),10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Greenwater Village,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Military Cut-Off,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Santa Escolastica,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Upper Dagsian,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Lower Dagsian,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Hillside,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Gabriela Silang,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Camp 8,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Poliwes,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,San Vicente,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Camp 7,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Bakakeng North,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,SLU-SVP Housing Village,10:11 AM,4:26 PM,Defective sectionalizer fuse cut-out at Teachers Camp
+07/08/2023,Scout Barrio,8:12 AM,n/a,Collapsed tree on primary line at Loakan
+07/08/2023,Loakan Proper,8:12 AM,n/a,Collapsed tree on primary line at Loakan
+07/08/2023,Liwanag-Loakan,8:12 AM,n/a,Collapsed tree on primary line at Loakan
+07/08/2023,Apugan-Loakan,8:12 AM,n/a,Collapsed tree on primary line at Loakan
+07/08/2023,Atok Trail,8:12 AM,n/a,Collapsed tree on primary line at Loakan
+07/08/2023,Camp Allen,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Upper Market Subdivision,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Kayang Extension,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Rizal Monument Area,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Legarda-Burnham-Kisad,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Palma-Urbano (Cariño-Palma),6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,MRR-Queen of Peace,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,City Camp Proper,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,City Camp Central,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Bakakeng Central,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Bakakeng North,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Balsigan,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Ferdinand (Happy Homes-Campo Sioco),6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Phil-Am,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,BGH Compound,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Dontogan,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,General Emilio F. Aguinaldo (Quirino‑Lower Magsaysay),6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Imelda R. Marcos (La Salle),6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Lower Rock Quarry,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Middle Rock Quarry,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Upper Rock Quarry,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,SLU-SVP Housing Village,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Sto. Rosario,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Sto. Tomas Proper,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Sto. Tomas School Area,6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/08/2023,Upper Quirino-Magsaysay (Upper QM),6:31 PM,7:19 PM,Electrocuted Martinez bird at Legarda Road
+07/09/2023,Sto. Tomas Proper,6:37 AM,7:45 AM,Electrocuted Bird
+07/09/2023,Dontogan,6:37 AM,7:45 AM,Electrocuted Bird
+07/09/2023,Sto. Tomas School Area,6:37 AM,7:45 AM,Electrocuted Bird
+07/09/2023,Asin Road,8:27 AM,9:22 AM,Electrocuted Martinez bird
+07/09/2023,Outlook Drive,3:52 PM,5:23 PM,Rotten tree branch that fell on primary line
+07/09/2023,Lucnab,3:52 PM,5:23 PM,Rotten tree branch that fell on primary line
+07/11/2023,Bayan Park East,5:45 PM,6:01 PM,To facilitate replacement of transformer secondary jumper
+07/11/2023,Brookspoint,5:45 PM,6:01 PM,To facilitate replacement of transformer secondary jumper
+07/11/2023,San Luis Village,7:36 PM,n/a,n/a
+07/11/2023,San Roque Village,7:36 PM,n/a,n/a
+07/11/2023,Pinsao Proper,10:47 PM,12:17 PM,Busted sectionalizer fuse
+07/11/2023,Pinsao Pilot Project,10:47 PM,12:17 PM,Busted sectionalizer fuse
+07/11/2023,Central Guisad,10:47 PM,12:17 PM,Busted sectionalizer fuse
+07/11/2023,Cresensia Village,10:47 PM,12:17 PM,Busted sectionalizer fuse
+07/11/2023,Andres Bonifacio (Lower Bokawkan),10:47 PM,12:17 PM,Busted sectionalizer fuse
+07/11/2023,Fairview Village,10:47 PM,12:17 PM,Busted sectionalizer fuse
+07/11/2023,Campo Filipino,10:47 PM,12:17 PM,Busted sectionalizer fuse
+07/12/2023,Irisan,2:56 PM,4:49 PM,Lightning
+07/12/2023,Dontogan,4:41 PM,5:31 PM,n/a
+07/13/2023,Sto. Tomas Proper,6:23 AM,7:13 AM,Electrocuted crow 
+07/13/2023,Dontogan,6:23 AM,7:13 AM,Electrocuted crow 
+07/13/2023,Sto. Tomas School Area,6:23 AM,7:13 AM,Electrocuted crow 
+07/13/2023,Asin Road,2:06 PM,n/a,n/a
+07/13/2023,Camp 7,9:40 PM,9:51 PM,To facilitate re-tightening of secondary bushing and secondary jumper of transformer
+07/14/2023,Loakan Proper,8:12 AM,10:52 AM,n/a
+07/14/2023,Liwanag-Loakan,8:12 AM,10:52 AM,n/a
+07/14/2023,San Luis Village,8:57 AM,10:45 AM,Rotten tree branch fell on primary line
+07/14/2023,Mines View Park,3:47 PM,n/a,n/a
+07/14/2023,Asin Road,5:08 PM,6:25 PM,n/a
+07/15/2023,Legarda-Burnham-Kisad,3:37 AM,3:49 AM,To facilitate correction of loose U-bolt connector
+07/15/2023,Victoria Village,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Quezon Hill Proper,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Middle Quezon Hill Subdivision (Quezon Hill Middle),6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Upper Quezon Hill,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Guisad Central,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Pinsao Proper,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Pinsao Pilot Project,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Fairview Village,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Irisan,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Cresencia Village,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Dizon Subdivision,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Guisad Surong,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Andres Bonifacio (Lower Bokawkan),6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Campo Filipino,6:02 AM,7:38 AM,Detached pole ground on primary line and busted pin type insulator
+07/15/2023,Irisan,6:14 AM,9:03 AM,Cleared bamboo near BC08516
+07/15/2023,Irisan,1:27 PM,6:53 PM,n/a
+07/15/2023,Kias,2:31 PM,n/a,n/a
+07/15/2023,Fort Del Pilar,2:31 PM,n/a,n/a
+07/15/2023,Camp 7,2:51 PM,n/a,n/a
+07/15/2023,Asin Road,4:26 PM,n/a,n/a
+07/15/2023,Kias,6:16 PM,7:03 PM,To facilitate correction of sparking line
+07/15/2023,Fort del Pilar,6:16 PM,7:03 PM,To facilitate correction of sparking line
+07/15/2023,Irisan,6:42 PM,9:00 PM,n/a
+07/16/2023,Sto. Tomas Proper,3:46 PM,n/a,n/a
+07/16/2023,Dontogan,4:46 PM,n/a,n/a
+07/16/2023,Sto. Tomas School Area,5:46 PM,n/a,n/a
+07/16/2023,Loakan Proper,11:37 PM,12:34 AM,n/a
+07/16/2023,Camp 7,9:19 PM,n/a,n/a
+07/17/2023,Camp 7,4:43 AM,6:20 AM,Tree branch that fell on primary line
+07/17/2023,Camp 7,5:43 AM,7:20 AM,Tree branch that fell on primary line
+07/17/2023,Camp 7,6:43 AM,8:20 AM,Tree branch that fell on primary line
+07/17/2023,Bakakeng North,7:43 AM,9:20 AM,Tree branch that fell on primary line
+07/17/2023,SLU-SVP Housing Village,9:43 AM,11:20 AM,Tree branch that fell on primary line
+07/17/2023,Asin Road,6:36 AM,7:44 AM,Electrocuted myna bird
+07/18/2023,Irisan,3:19 AM,5:08 AM,Cut secondary jumper of transformer
+07/18/2023,Lower Rock Quarry,12:31 PM,3:31 PM,Facilitate Correction of Low / Sagging Secondary Lines
+07/18/2023,Irisan,7:41 PM,n/a,n/a
+07/19/2023,Atok Trail,3:48 PM,4:13 PM,n/a
+07/19/2023,Kias,3:48 PM,4:13 PM,n/a
+07/19/2023,Fort del Pilar,3:48 PM,4:13 PM,n/a
+07/19/2023,Irisan,6:03 PM,7:23 PM,To facilitate correction of sparking lineside of fuse cut-out
+07/20/2023,Gibraltar,4:05 PM,5:20 PM,n/a
+07/20/2023,Mines View Park,5:05 PM,5:20 PM,n/a
+07/20/2023,Asin Road,12:45 AM,n/a,n/a
+07/20/2023,San Luis Village,12:45 AM,n/a,n/a
+07/20/2023,St. Joseph Village,10:30 PM,11:33 PM,To facilitate correction of sparking line
+07/20/2023,Outlook Drive,9:00 PM,10:17 PM,Tree branch touching primary line
+07/20/2023,Legarda-Burnham-Kisad,9:49 AM,10:40 AM,Replacement of undersized secondary line.
+07/21/2023,Trancoville,6:27 PM,8:31 PM,Cut line side jumper of sectionalizer fuse cut-out.
+07/21/2023,Pacdal,5:45 PM,7:03 PM,n/a
+07/22/2023,Loakan Proper,10:07 AM,10:57 AM,Electrocuted crow
+07/22/2023,Liwanag-Loakan,10:07 AM,10:57 AM,Electrocuted crow
+07/23/2023,Dominican Hill-Mirador,12:00 PM,1:51 PM,Removed tree branch that leaned on secondary line
+07/23/2023,Asin Road,11:05 AM,12:41 PM,n/a
+07/25/2023,Session Road Area,1:44 PM,n/a,Typhoon Egay
+07/25/2023,Apugan-Loakan,1:41 PM,3:25 PM,Fallen branches on secondary line
+07/25/2023,North Sanitary Camp,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Bayan Park Village,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Bayan Park East,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Bayan Park West (Bayan Park and Leonila Hill),5:26 PM,n/a,Typhoon Egay
+07/25/2023,Aurora Hill Proper (Malvar-Sgt. Floresca),5:26 PM,n/a,Typhoon Egay
+07/25/2023,North Central Aurora Hill,5:26 PM,n/a,Typhoon Egay
+07/25/2023,South Central Aurora Hill,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Lopez Jaena,5:26 PM,n/a,Typhoon Egay
+07/25/2023,San Antonio Village,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Brookspoint,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Trancoville,5:26 PM,n/a,Typhoon Egay
+07/25/2023,West Modern Site,5:26 PM,n/a,Typhoon Egay
+07/25/2023,East Modern Site,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Brookside,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Imelda Village,5:26 PM,n/a,Typhoon Egay
+07/25/2023,St. Joseph Village,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Holy Ghost Proper,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Holy Ghost Extension,5:26 PM,n/a,Typhoon Egay
+07/25/2023,New Lucban,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Teodora Alonzo,5:26 PM,n/a,Typhoon Egay
+07/25/2023,A. Bonifacio-Caguioa-Rimando (ABCR),5:26 PM,n/a,Typhoon Egay
+07/25/2023,Cabinet Hill-Teacher's Camp,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Engineers' Hill,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Malcolm Square-Perfecto (Jose Abad Santos),5:26 PM,n/a,Typhoon Egay
+07/25/2023,Harrison-Claudio Carantes,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Session Road Area,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Military Cut-Off,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Pacdal,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Mines View Park,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Gibraltar,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Pucsusan,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Lualhati,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Outlook Drive,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Lucnab,5:26 PM,n/a,Typhoon Egay
+07/25/2023,DPS Compound,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Bal-Marcoville (Marcoville),5:26 PM,n/a,Typhoon Egay
+07/25/2023,Greenwater Village,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Santa Escolastica,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Upper Dagsian,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Lower Dagsian,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Hillside,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Gabriela Silang,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Camp 8,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Poliwes,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Camp 7,5:26 PM,n/a,Typhoon Egay
+07/25/2023,San Vicente,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Bakakeng North,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Outlook Drive,5:26 PM,n/a,Typhoon Egay
+07/25/2023,South Drive,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Country Club Village,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Happy Hallow,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Apugan-Loakan,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Loakan Proper,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Scout Barrio,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Liwanag-Loakan,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Atok Trail,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Camp 7,5:26 PM,n/a,Typhoon Egay
+07/25/2023,Lower Magsaysay,6:46 PM,n/a,Typhoon Egay
+07/25/2023,Ferdinand (Happy Homes-Campo Sioco),7:46 PM,n/a,Typhoon Egay
+07/25/2023,Camdas Subdivision,8:46 PM,n/a,Typhoon Egay
+07/25/2023,Quirino Hill,9:46 PM,n/a,Typhoon Egay
+07/25/2023,Dizon Subdivision,10:46 PM,n/a,Typhoon Egay
+07/25/2023,Pinget,11:46 PM,n/a,Typhoon Egay
+07/25/2023,Magsaysay Private Road,12:46 AM,n/a,Typhoon Egay
+07/25/2023,Slaughter House Area (Sto. Niño Slaughter),1:46 AM,n/a,Typhoon Egay
+07/25/2023,Padre Burgos,2:46 AM,n/a,Typhoon Egay
+07/25/2023,Padre Zamora,3:46 AM,n/a,Typhoon Egay
+07/25/2023,Kayang-Hilltop,3:46 AM,n/a,Typhoon Egay
+07/25/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),4:46 AM,n/a,Typhoon Egay
+07/25/2023,Rizal Monument Area,5:46 AM,n/a,Typhoon Egay
+07/25/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),6:46 AM,n/a,Typhoon Egay
+07/25/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),7:46 AM,n/a,Typhoon Egay
+07/25/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),8:46 AM,n/a,Typhoon Egay
+07/25/2023,San Luis Village,10:46 AM,n/a,Typhoon Egay
+07/25/2023,Dominican Hill-Mirador,11:46 AM,n/a,Typhoon Egay
+07/25/2023,Lower Lourdes Subdivision,12:46 PM,n/a,Typhoon Egay
+07/25/2023,San Luis Village,1:46 PM,n/a,Typhoon Egay
+07/25/2023,MRR-Queen of Peace,2:46 PM,n/a,Typhoon Egay
+07/25/2023,Apugan-Loakan,3:46 PM,n/a,Typhoon Egay
+07/25/2023,Sto. Tomas School Area,4:46 PM,n/a,Typhoon Egay
+07/25/2023,BGH Compound,5:46 PM,n/a,Typhoon Egay
+07/25/2023,Phil-AM,6:46 PM,n/a,Typhoon Egay
+07/25/2023,Pinsao Proper,3:36 PM,n/a,Typhoon Egay
+07/25/2023,Pacdal,12:02 PM,2:28 PM,Fallen tree branch on primary line
+07/26/2023,Atok Trail,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Kias,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Fort del Pilar,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Session Road Area,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Military Cut-Off,9:43 PM,n/a,Typhoon Egay
+07/26/2023,BGH Compound,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Phil-Am,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Legarda-Burnham-Kisad,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Camp Allen,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Upper Market Subdivision,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Kayang Extension,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Rizal Monument Area,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Legarda-Burnham-Kisad,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Palma-Urbano (Cariño-Palma),9:43 PM,n/a,Typhoon Egay
+07/26/2023,MRR-Queen of Peace,9:43 PM,n/a,Typhoon Egay
+07/26/2023,City Camp Proper,9:43 PM,n/a,Typhoon Egay
+07/26/2023,City Camp Central,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Bakakeng Central,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Bakakeng North,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Balsigan,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Ferdinand (Happy Homes-Campo Sioco),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Phil-Am,9:43 PM,n/a,Typhoon Egay
+07/26/2023,BGH Compound,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Dontogan,9:43 PM,n/a,Typhoon Egay
+07/26/2023,General Emilio F. Aguinaldo (Quirino‑Lower Magsaysay),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Imelda R. Marcos (La Salle),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Lower Rock Quarry,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Middle Rock Quarry,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Upper Rock Quarry,9:43 PM,n/a,Typhoon Egay
+07/26/2023,SLU-SVP Housing Village,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Sto. Rosario,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Sto. Tomas Proper,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Sto. Tomas School Area,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Upper Quirino-Magsaysay (Upper QM),9:43 PM,n/a,Typhoon Egay
+07/25/2023,Ambiong,1:14 PM,3:40 PM,Fallen dried tree branch of primary line
+07/25/2023,Pacdal,7:27 PM,8:13 PM,Typhoon Egay
+07/25/2023,Asin Road,7:27 PM,8:13 PM,Typhoon Egay
+07/25/2023,Irisan,7:27 PM,8:13 PM,Typhoon Egay
+07/25/2023,San Luis Village,7:27 PM,8:13 PM,Typhoon Egay
+07/25/2023,San Roque Village,7:27 PM,8:13 PM,Typhoon Egay
+07/25/2023,Victoria Village,7:27 PM,8:13 PM,Typhoon Egay
+07/25/2023,Middle Quezon Hill Subdivision (Quezon Hill Middle),7:27 PM,8:13 PM,Typhoon Egay
+07/25/2023,Camp 7,3:34 PM,n/a,Typhoon Egay
+07/25/2023,Irisan,3:34 PM,n/a,Typhoon Egay
+07/25/2023,Camp Allen,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Upper Market Subdivision,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Kayang Extension,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Rizal Monument Area,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Legarda-Burnham-Kisad,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Palma-Urbano (Cariño-Palma),4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,MRR-Queen of Peace,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,City Camp Proper,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,City Camp Central,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Bakakeng Central,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Bakakeng North,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Balsigan,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Ferdinand (Happy Homes-Campo Sioco),4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Phil-Am,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,BGH Compound,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Dontogan,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,General Emilio F. Aguinaldo (Quirino‑Lower Magsaysay),4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Imelda R. Marcos (La Salle),4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Lower Rock Quarry,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Middle Rock Quarry,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Upper Rock Quarry,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,SLU-SVP Housing Village,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Sto. Rosario,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Sto. Tomas Proper,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Sto. Tomas School Area,4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,Upper Quirino-Magsaysay (Upper QM),4:08 PM,6:09 PM,Removal of assorted tree branches near primary lines.
+07/25/2023,DPS Compound,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Bal-Marcoville (Marcoville),3:50 PM,n/a,Typhoon Egay
+07/25/2023,Greenwater Village,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Military Cut-Off,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Santa Escolastica,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Upper Dagsian,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Lower Dagsian,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Hillside,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Gabriela Silang,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Camp 8,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Poliwes,3:50 PM,n/a,Typhoon Egay
+07/25/2023,San Vicente,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Camp 7,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Bakakeng North,3:50 PM,n/a,Typhoon Egay
+07/25/2023,SLU-SVP Housing Village,3:50 PM,n/a,Typhoon Egay
+07/25/2023,Victoria Village,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Quezon Hill Proper,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Middle Quezon Hill Subdivision (Quezon Hill Middle),5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Upper Quezon Hill,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Guisad Central,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Pinsao Proper,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Pinsao Pilot Project,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Fairview Village,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Irisan,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Cresencia Village,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Dizon Subdivision,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Guisad Central,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Guisad Surong,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Andres Bonifacio (Lower Bokawkan),5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Fairview Village,5:32 PM,6:12 PM,Typhoon Egay
+07/25/2023,Campo Filipino,5:32 PM,6:12 PM,Typhoon Egay
+07/26/2023,Atok Trail,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Kias,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Fort del Pilar,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Session Road Area,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Military Cut-Off,9:43 PM,n/a,Typhoon Egay
+07/26/2023,BGH Compound,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Phil-Am,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Legarda-Burnham-Kisad,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Camp Allen,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Upper Market Subdivision,9:43 PM,n/a,Purok
+07/26/2023,Kayang Extension,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Abanao-Zandueta-Kayong-Chugum-Otek (AZKCO),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Rizal Monument Area,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Legarda-Burnham-Kisad,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Palma-Urbano (Cariño-Palma),9:43 PM,n/a,Typhoon Egay
+07/26/2023,MRR-Queen of Peace,9:43 PM,n/a,Typhoon Egay
+07/26/2023,City Camp Proper,9:43 PM,n/a,Typhoon Egay
+07/26/2023,City Camp Central,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Bakakeng Central,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Bakakeng North,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Balsigan,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Ferdinand (Happy Homes-Campo Sioco),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Dontogan,9:43 PM,n/a,Typhoon Egay
+07/26/2023,General Emilio F. Aguinaldo (Quirino‑Lower Magsaysay),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Imelda R. Marcos (La Salle),9:43 PM,n/a,Typhoon Egay
+07/26/2023,Lower Rock Quarry,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Middle Rock Quarry,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Upper Rock Quarry,9:43 PM,n/a,Typhoon Egay
+07/26/2023,SLU-SVP Housing Village,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Sto. Rosario,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Sto. Tomas Proper,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Sto. Tomas School Area,9:43 PM,n/a,Typhoon Egay
+07/26/2023,Upper Quirino-Magsaysay (Upper QM),9:43 PM,n/a,Typhoon Egay
+07/28/2023,Atok Trail,5:24 PM,6:46 PM,n/a
+07/28/2023,Camp 7,5:24 PM,6:46 PM,n/a
+07/30/2023,Bakakeng North,12:47 PM,1:09 PM,Correction of cut primary line
+07/30/2023,SLU-SVP Housing Village,12:47 PM,1:09 PM,Correction of cut primary line
+07/31/2023,Sto. Tomas School Area,5:32 AM,n/a,n/a

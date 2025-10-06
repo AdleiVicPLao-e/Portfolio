@@ -20,9 +20,9 @@ function initAboutMeSection(container) {
 
         MySql: `<h2>MySQL</h2><p>Normalized e-commerce database schema design.</p>`,
 
-        R: `<h2>R</h2><p>Statistical visualization with ggplot2.</p>`,
+        R: `<iframe src="./Resources/Assets/Projects/r/r.html"></iframe>`,
 
-        Spreadsheets: `<h2>Spreadsheets</h2><p>Automated budget tracker with formulas & charts.</p>`
+        Spreadsheets: `<iframe src="./Resources/Assets/Projects/spreadsheets/ss.html"></iframe>`
     };
 
     container.querySelectorAll(".skill-item").forEach(skill => {
