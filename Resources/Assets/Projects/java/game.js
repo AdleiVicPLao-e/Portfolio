@@ -15,11 +15,11 @@ const slashEffect = document.getElementById("slashEffect");
 // --- Image URLs ---
 const assets = {
   gifs: {
-    slashPlayer: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash.GIF",
-    slashEnemy1: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash1.GIF",
-    slashEnemy2: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash2.GIF",
-    round1BG: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/2wins.GIF",
-    round2BG: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/5rounds.GIF"
+    slashPlayer: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash.gif",
+    slashEnemy1: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash1.gif",
+    slashEnemy2: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash2.gif",
+    round1BG: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/2wins.gif",
+    round2BG: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/5rounds.gif"
   },
   images: {
     congratsRound: "./assets/congrats-round.png",
