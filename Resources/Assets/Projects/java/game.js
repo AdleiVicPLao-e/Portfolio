@@ -12,6 +12,22 @@ const playerHPDiv = document.getElementById("playerHP");
 const enemyHPDiv = document.getElementById("enemyHP");
 const slashEffect = document.getElementById("slashEffect");
 
+// --- Image URLs ---
+const assets = {
+  gifs: {
+    slashPlayer: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash.GIF",
+    slashEnemy1: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash1.GIF",
+    slashEnemy2: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/slash2.GIF",
+    round1BG: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/2wins.GIF",
+    round2BG: "https://media.githubusercontent.com/media/AdleiVicPLao-e/Portfolio/refs/heads/main/Resources/Assets/Projects/java/assets/5rounds.GIF"
+  },
+  images: {
+    congratsRound: "./assets/congrats-round.png",
+    congratsWinner: "./assets/congrats-winner.png"
+  }
+};
+
+
 let currentWord = "";
 let selectedLetters = [];
 let validWords = new Set();
@@ -53,9 +69,9 @@ function renderEnemyHP() {
 }
 
 function playSlash(type) {
-  if (type === "player") slashEffect.src = "./assets/slash.GIF";
-  else if (type === "enemy1") slashEffect.src = "./assets/slash1.GIF";
-  else if (type === "enemy2") slashEffect.src = "./assets/slash2.GIF";
+  if (type === "player") slashEffect.src = assets.gifs.slashPlayer;
+  else if (type === "enemy1") slashEffect.src = assets.gifs.slashEnemy1;
+  else if (type === "enemy2") slashEffect.src = assets.gifs.slashEnemy2;
 
   slashEffect.classList.remove("hidden");
   setTimeout(() => slashEffect.classList.add("hidden"), 600);
@@ -77,7 +93,9 @@ function startRound() {
   renderEnemyHP();
   roundCounterEl.textContent = `Round: ${round}`;
   timerEl.textContent = `Time Left: ${timeLeft}s`;
-  roundBackground.src = round === 1 ? "./assets/2wins.GIF" : "./assets/5rounds.GIF";
+
+  // Use stored background GIFs
+  roundBackground.src = round === 1 ? assets.gifs.round1BG : assets.gifs.round2BG;
 
   generateLetters();
   startTimer();
@@ -100,9 +118,7 @@ function startTimer() {
 }
 
 function showCongrats(type) {
-  if (type === "round") congratsImage.src = "./assets/congrats-round.png";
-  else if (type === "winner") congratsImage.src = "./assets/congrats-winner.png";
-
+  congratsImage.src = type === "round" ? assets.images.congratsRound : assets.images.congratsWinner;
   congratsOverlay.classList.remove("hidden");
 
   if (type === "round") {
@@ -111,7 +127,6 @@ function showCongrats(type) {
     }, 2000);
   }
 }
-
 
 function damageEnemy(amount) {
   enemyHP -= amount;
