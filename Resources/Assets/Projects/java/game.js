@@ -53,9 +53,9 @@ function renderEnemyHP() {
 }
 
 function playSlash(type) {
-  if (type === "player") slashEffect.src = "./assets/slash.gif";
-  else if (type === "enemy1") slashEffect.src = "./assets/slash1.gif";
-  else if (type === "enemy2") slashEffect.src = "./assets/slash2.gif";
+  if (type === "player") slashEffect.src = "./assets/slash.GIF";
+  else if (type === "enemy1") slashEffect.src = "./assets/slash1.GIF";
+  else if (type === "enemy2") slashEffect.src = "./assets/slash2.GIF";
 
   slashEffect.classList.remove("hidden");
   setTimeout(() => slashEffect.classList.add("hidden"), 600);
@@ -77,7 +77,7 @@ function startRound() {
   renderEnemyHP();
   roundCounterEl.textContent = `Round: ${round}`;
   timerEl.textContent = `Time Left: ${timeLeft}s`;
-  roundBackground.src = round === 1 ? "./assets/2wins.gif" : "./assets/5rounds.gif";
+  roundBackground.src = round === 1 ? "./assets/2wins.GIF" : "./assets/5rounds.GIF";
 
   generateLetters();
   startTimer();
