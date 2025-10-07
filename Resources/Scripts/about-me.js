@@ -16,7 +16,7 @@ function initAboutMeSection(container) {
 
         Python: `<iframe src="./Resources/Assets/Projects/python/python.html"></iframe>`,
 
-        MySql: `<h2>MySQL</h2><p>Normalized e-commerce database schema design.</p>`,
+        MySql: `<iframe src="./Resources/Assets/Projects/sql/sql.html"></iframe>`,
 
         R: `<iframe src="./Resources/Assets/Projects/r/r.html"></iframe>`,
 

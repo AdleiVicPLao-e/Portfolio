@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Equipment Management System</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Main Menu -->
+        <div id="main-menu" class="card">
+            <h2>What do you want to do?</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showSection('user-operations')">
+                    <h3>User Operations</h3>
+                    <p>Manage users and their accounts</p>
+                </div>
+                <div class="menu-item" onclick="exitSystem()">
+                    <h3>Exit</h3>
+                    <p>Close the application</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- User Operations -->
+        <div id="user-operations" class="card hidden">
+            <h2>User Operations</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showSection('custodian-operations')">
+                    <h3>Custodian Operations</h3>
+                    <p>Manage custodian accounts</p>
+                </div>
+                <div class="menu-item" onclick="showSection('student-operations')">
+                    <h3>Student Operations</h3>
+                    <p>Manage student accounts</p>
+                </div>
+                <div class="menu-item" onclick="showSection('instructor-operations')">
+                    <h3>Instructor Operations</h3>
+                    <p>Manage instructor accounts</p>
+                </div>
+                <div class="menu-item" onclick="showSection('main-menu')">
+                    <h3>Back to Main Menu</h3>
+                    <p>Return to the main menu</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Custodian Operations -->
+        <div id="custodian-operations" class="card hidden">
+            <h2>Custodian Operations</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showModal('register-custodian-modal')">
+                    <h3>Register Custodian</h3>
+                    <p>Create a new custodian account</p>
+                </div>
+                <div class="menu-item" onclick="showCustodians()">
+                    <h3>Show All Custodians</h3>
+                    <p>View all custodian accounts</p>
+                </div>
+                <div class="menu-item" onclick="showModal('login-custodian-modal')">
+                    <h3>Login as Custodian</h3>
+                    <p>Access custodian features</p>
+                </div>
+                <div class="menu-item" onclick="showSection('user-operations')">
+                    <h3>Back</h3>
+                    <p>Return to user operations</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Student Operations -->
+        <div id="student-operations" class="card hidden">
+            <h2>Student Operations</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showModal('register-student-modal')">
+                    <h3>Register Student</h3>
+                    <p>Create a new student account</p>
+                </div>
+                <div class="menu-item" onclick="showStudents()">
+                    <h3>Show All Students</h3>
+                    <p>View all student accounts</p>
+                </div>
+                <div class="menu-item" onclick="showModal('login-student-modal')">
+                    <h3>Login as Student</h3>
+                    <p>Access student features</p>
+                </div>
+                <div class="menu-item" onclick="showSection('user-operations')">
+                    <h3>Back</h3>
+                    <p>Return to user operations</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Instructor Operations -->
+        <div id="instructor-operations" class="card hidden">
+            <h2>Instructor Operations</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showModal('register-instructor-modal')">
+                    <h3>Register Instructor</h3>
+                    <p>Create a new instructor account</p>
+                </div>
+                <div class="menu-item" onclick="showInstructors()">
+                    <h3>Show All Instructors</h3>
+                    <p>View all instructor accounts</p>
+                </div>
+                <div class="menu-item" onclick="showModal('login-instructor-modal')">
+                    <h3>Login as Instructor</h3>
+                    <p>Access instructor features</p>
+                </div>
+                <div class="menu-item" onclick="showSection('user-operations')">
+                    <h3>Back</h3>
+                    <p>Return to user operations</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Custodian Dashboard -->
+        <div id="custodian-dashboard" class="card hidden">
+            <h2>Custodian Dashboard</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showSection('equipment-operations')">
+                    <h3>Equipment Operations</h3>
+                    <p>Manage equipment</p>
+                </div>
+                <div class="menu-item" onclick="showModal('update-custodian-modal')">
+                    <h3>Update Account</h3>
+                    <p>Modify your account details</p>
+                </div>
+                <div class="menu-item" onclick="deleteCurrentUser('custodian')">
+                    <h3>Delete Account</h3>
+                    <p>Remove your account</p>
+                </div>
+                <div class="menu-item" onclick="showModal('approve-deny-modal')">
+                    <h3>Approve/Deny Requests</h3>
+                    <p>Manage borrow requests</p>
+                </div>
+                <div class="menu-item" onclick="showModal('return-equipment-modal')">
+                    <h3>Return Equipment</h3>
+                    <p>Process equipment returns</p>
+                </div>
+                <div class="menu-item" onclick="logout()">
+                    <h3>Logout</h3>
+                    <p>Return to main menu</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Student Dashboard -->
+        <div id="student-dashboard" class="card hidden">
+            <h2>Student Dashboard</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showModal('update-student-modal')">
+                    <h3>Update Account</h3>
+                    <p>Modify your account details</p>
+                </div>
+                <div class="menu-item" onclick="showModal('borrow-equipment-modal')">
+                    <h3>Borrow Equipment</h3>
+                    <p>Request to borrow equipment</p>
+                </div>
+                <div class="menu-item" onclick="showModal('cancel-request-modal')">
+                    <h3>Cancel Request</h3>
+                    <p>Cancel pending borrow requests</p>
+                </div>
+                <div class="menu-item" onclick="deleteCurrentUser('student')">
+                    <h3>Delete Account</h3>
+                    <p>Remove your account</p>
+                </div>
+                <div class="menu-item" onclick="logout()">
+                    <h3>Logout</h3>
+                    <p>Return to main menu</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Instructor Dashboard -->
+        <div id="instructor-dashboard" class="card hidden">
+            <h2>Instructor Dashboard</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showModal('update-instructor-modal')">
+                    <h3>Update Account</h3>
+                    <p>Modify your account details</p>
+                </div>
+                <div class="menu-item" onclick="deleteCurrentUser('instructor')">
+                    <h3>Delete Account</h3>
+                    <p>Remove your account</p>
+                </div>
+                <div class="menu-item" onclick="logout()">
+                    <h3>Logout</h3>
+                    <p>Return to main menu</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Equipment Operations -->
+        <div id="equipment-operations" class="card hidden">
+            <h2>Equipment Operations</h2>
+            <div class="menu">
+                <div class="menu-item" onclick="showModal('add-equipment-modal')">
+                    <h3>Add Equipment</h3>
+                    <p>Add new equipment to the system</p>
+                </div>
+                <div class="menu-item" onclick="showEquipment()">
+                    <h3>Show All Equipment</h3>
+                    <p>View all equipment</p>
+                </div>
+                <div class="menu-item" onclick="showModal('update-equipment-modal')">
+                    <h3>Update Equipment</h3>
+                    <p>Modify equipment details</p>
+                </div>
+                <div class="menu-item" onclick="showModal('delete-equipment-modal')">
+                    <h3>Delete Equipment</h3>
+                    <p>Remove equipment from the system</p>
+                </div>
+                <div class="menu-item" onclick="showSection('custodian-dashboard')">
+                    <h3>Back to Dashboard</h3>
+                    <p>Return to custodian dashboard</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Data Display Areas -->
+        <div id="data-display" class="card hidden">
+            <h2 id="data-title"></h2>
+            <div id="data-content"></div>
+            <div class="nav-buttons">
+                <button onclick="hideDataDisplay()">Back</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    
+    <!-- Register Custodian Modal -->
+    <div id="register-custodian-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Register Custodian</h2>
+                <button class="close-btn" onclick="closeModal('register-custodian-modal')">&times;</button>
+            </div>
+            <form id="register-custodian-form">
+                <div class="form-group">
+                    <label for="custodian-id">ID:</label>
+                    <input type="number" id="custodian-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="custodian-firstname">First Name:</label>
+                    <input type="text" id="custodian-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="custodian-lastname">Last Name:</label>
+                    <input type="text" id="custodian-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="custodian-email">Email:</label>
+                    <input type="email" id="custodian-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="custodian-password">Password:</label>
+                    <input type="password" id="custodian-password" required>
+                </div>
+                <button type="submit" class="success">Register</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Login Custodian Modal -->
+    <div id="login-custodian-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login as Custodian</h2>
+                <button class="close-btn" onclick="closeModal('login-custodian-modal')">&times;</button>
+            </div>
+            <form id="login-custodian-form" class="login-form">
+                <div class="form-group">
+                    <label for="login-custodian-email">Email:</label>
+                    <input type="email" id="login-custodian-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-custodian-password">Password:</label>
+                    <input type="password" id="login-custodian-password" required>
+                </div>
+                <div id="login-custodian-error" class="error-message hidden"></div>
+                <button type="submit" class="success">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Student Modal -->
+    <div id="register-student-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Register Student</h2>
+                <button class="close-btn" onclick="closeModal('register-student-modal')">&times;</button>
+            </div>
+            <form id="register-student-form">
+                <div class="form-group">
+                    <label for="student-id">ID:</label>
+                    <input type="number" id="student-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-firstname">First Name:</label>
+                    <input type="text" id="student-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-lastname">Last Name:</label>
+                    <input type="text" id="student-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-email">Email:</label>
+                    <input type="email" id="student-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-password">Password:</label>
+                    <input type="password" id="student-password" required>
+                </div>
+                <button type="submit" class="success">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Student Modal -->
+    <div id="login-student-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login as Student</h2>
+                <button class="close-btn" onclick="closeModal('login-student-modal')">&times;</button>
+            </div>
+            <form id="login-student-form" class="login-form">
+                <div class="form-group">
+                    <label for="login-student-email">Email:</label>
+                    <input type="email" id="login-student-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-student-password">Password:</label>
+                    <input type="password" id="login-student-password" required>
+                </div>
+                <div id="login-student-error" class="error-message hidden"></div>
+                <button type="submit" class="success">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Instructor Modal -->
+    <div id="register-instructor-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Register Instructor</h2>
+                <button class="close-btn" onclick="closeModal('register-instructor-modal')">&times;</button>
+            </div>
+            <form id="register-instructor-form">
+                <div class="form-group">
+                    <label for="instructor-id">ID:</label>
+                    <input type="number" id="instructor-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-firstname">First Name:</label>
+                    <input type="text" id="instructor-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-lastname">Last Name:</label>
+                    <input type="text" id="instructor-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-email">Email:</label>
+                    <input type="email" id="instructor-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-password">Password:</label>
+                    <input type="password" id="instructor-password" required>
+                </div>
+                <button type="submit" class="success">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Instructor Modal -->
+    <div id="login-instructor-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login as Instructor</h2>
+                <button class="close-btn" onclick="closeModal('login-instructor-modal')">&times;</button>
+            </div>
+            <form id="login-instructor-form" class="login-form">
+                <div class="form-group">
+                    <label for="login-instructor-email">Email:</label>
+                    <input type="email" id="login-instructor-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-instructor-password">Password:</label>
+                    <input type="password" id="login-instructor-password" required>
+                </div>
+                <div id="login-instructor-error" class="error-message hidden"></div>
+                <button type="submit" class="success">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Equipment Modal -->
+    <div id="add-equipment-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Equipment</h2>
+                <button class="close-btn" onclick="closeModal('add-equipment-modal')">&times;</button>
+            </div>
+            <form id="add-equipment-form">
+                <div class="form-group">
+                    <label for="equipment-id">Equipment ID:</label>
+                    <input type="number" id="equipment-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="equipment-name">Equipment Name:</label>
+                    <input type="text" id="equipment-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="equipment-status">Status:</label>
+                    <select id="equipment-status" required>
+                        <option value="good">Good</option>
+                        <option value="waiting">Waiting</option>
+                        <option value="borrowed">Borrowed</option>
+                    </select>
+                </div>
+                <button type="submit" class="success">Add Equipment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Equipment Modal -->
+    <div id="update-equipment-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Update Equipment</h2>
+                <button class="close-btn" onclick="closeModal('update-equipment-modal')">&times;</button>
+            </div>
+            <form id="update-equipment-form">
+                <div class="form-group">
+                    <label for="update-equipment-id">Equipment ID:</label>
+                    <input type="number" id="update-equipment-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-equipment-name">Equipment Name:</label>
+                    <input type="text" id="update-equipment-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-equipment-status">Status:</label>
+                    <select id="update-equipment-status" required>
+                        <option value="good">Good</option>
+                        <option value="waiting">Waiting</option>
+                        <option value="borrowed">Borrowed</option>
+                        <option value="approved">Approved</option>
+                        <option value="denied">Denied</option>
+                    </select>
+                </div>
+                <button type="submit" class="success">Update Equipment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Equipment Modal -->
+    <div id="delete-equipment-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Delete Equipment</h2>
+                <button class="close-btn" onclick="closeModal('delete-equipment-modal')">&times;</button>
+            </div>
+            <form id="delete-equipment-form">
+                <div class="form-group">
+                    <label for="delete-equipment-id">Equipment ID:</label>
+                    <input type="number" id="delete-equipment-id" required>
+                </div>
+                <button type="submit" class="danger">Delete Equipment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Custodian Modal -->
+    <div id="update-custodian-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Update Custodian Account</h2>
+                <button class="close-btn" onclick="closeModal('update-custodian-modal')">&times;</button>
+            </div>
+            <form id="update-custodian-form">
+                <div class="form-group">
+                    <label for="update-custodian-firstname">First Name:</label>
+                    <input type="text" id="update-custodian-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-custodian-lastname">Last Name:</label>
+                    <input type="text" id="update-custodian-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-custodian-email">Email:</label>
+                    <input type="email" id="update-custodian-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-custodian-password">Password:</label>
+                    <input type="password" id="update-custodian-password" required>
+                </div>
+                <button type="submit" class="success">Update Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Student Modal -->
+    <div id="update-student-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Update Student Account</h2>
+                <button class="close-btn" onclick="closeModal('update-student-modal')">&times;</button>
+            </div>
+            <form id="update-student-form">
+                <div class="form-group">
+                    <label for="update-student-firstname">First Name:</label>
+                    <input type="text" id="update-student-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-student-lastname">Last Name:</label>
+                    <input type="text" id="update-student-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-student-email">Email:</label>
+                    <input type="email" id="update-student-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-student-password">Password:</label>
+                    <input type="password" id="update-student-password" required>
+                </div>
+                <button type="submit" class="success">Update Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Instructor Modal -->
+    <div id="update-instructor-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Update Instructor Account</h2>
+                <button class="close-btn" onclick="closeModal('update-instructor-modal')">&times;</button>
+            </div>
+            <form id="update-instructor-form">
+                <div class="form-group">
+                    <label for="update-instructor-firstname">First Name:</label>
+                    <input type="text" id="update-instructor-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-instructor-lastname">Last Name:</label>
+                    <input type="text" id="update-instructor-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-instructor-email">Email:</label>
+                    <input type="email" id="update-instructor-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="update-instructor-password">Password:</label>
+                    <input type="password" id="update-instructor-password" required>
+                </div>
+                <button type="submit" class="success">Update Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Borrow Equipment Modal -->
+    <div id="borrow-equipment-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Borrow Equipment</h2>
+                <button class="close-btn" onclick="closeModal('borrow-equipment-modal')">&times;</button>
+            </div>
+            <div id="borrow-equipment-list">
+                <p>Loading available equipment...</p>
+            </div>
+            <form id="borrow-equipment-form">
+                <div class="form-group">
+                    <label for="borrow-date">Borrow Date (yyyy-MM-dd):</label>
+                    <input type="text" id="borrow-date" placeholder="2023-12-31" required>
+                </div>
+                <div class="form-group">
+                    <label for="borrow-time">Borrow Time (HH:mm):</label>
+                    <input type="text" id="borrow-time" placeholder="14:30" required>
+                </div>
+                <div class="form-group">
+                    <label for="borrow-instructor-id">Instructor ID:</label>
+                    <input type="number" id="borrow-instructor-id" required>
+                </div>
+                <button type="submit" class="success">Add to Borrow List</button>
+            </form>
+            <div class="nav-buttons">
+                <button onclick="sendBorrowRequest()" class="success">Send Request</button>
+                <button onclick="closeModal('borrow-equipment-modal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Approve/Deny Requests Modal -->
+    <div id="approve-deny-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Approve/Deny Borrow Requests</h2>
+                <button class="close-btn" onclick="closeModal('approve-deny-modal')">&times;</button>
+            </div>
+            <div id="requests-list">
+                <p>Loading requests...</p>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="closeModal('approve-deny-modal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Return Equipment Modal -->
+    <div id="return-equipment-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Return Equipment</h2>
+                <button class="close-btn" onclick="closeModal('return-equipment-modal')">&times;</button>
+            </div>
+            <div id="return-equipment-list">
+                <p>Loading borrowed equipment...</p>
+            </div>
+            <form id="return-equipment-form">
+                <div class="form-group">
+                    <label for="return-request-id">Request ID:</label>
+                    <input type="number" id="return-request-id" required>
+                </div>
+                <button type="submit" class="success">Process Return</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cancel Request Modal -->
+    <div id="cancel-request-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cancel Borrow Request</h2>
+                <button class="close-btn" onclick="closeModal('cancel-request-modal')">&times;</button>
+            </div>
+            <div id="cancel-request-list">
+                <p>Loading your requests...</p>
+            </div>
+            <form id="cancel-request-form">
+                <div class="form-group">
+                    <label for="cancel-request-id">Request ID:</label>
+                    <input type="number" id="cancel-request-id" required>
+                </div>
+                <button type="submit" class="danger">Cancel Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+[
+  {"req_id":1,"stud_id":2100000,"inst_id":1111112,"req_status":"approved","equip_id":1001},
+  {"req_id":2,"stud_id":1111777,"inst_id":1111113,"req_status":"approved","equip_id":4001},
+  {"req_id":3,"stud_id":3333790,"inst_id":1111114,"req_status":"approved","equip_id":2001}
+]

@@ -1,0 +1,14 @@
+[
+  {"equip_id":1000,"equip_name":"2800 cisco route","equip_status":"good"},
+  {"equip_id":1001,"equip_name":"2800 cisco route","equip_status":"borrowed"},
+  {"equip_id":2000,"equip_name":"switch","equip_status":"good"},
+  {"equip_id":2001,"equip_name":"switch","equip_status":"borrowed"},
+  {"equip_id":3000,"equip_name":"crimping tool","equip_status":"good"},
+  {"equip_id":4000,"equip_name":"serial cable","equip_status":"good"},
+  {"equip_id":4001,"equip_name":"serial cable","equip_status":"borrowed"},
+  {"equip_id":5000,"equip_name":"console cable","equip_status":"good"},
+  {"equip_id":6000,"equip_name":"anti-static wrist ba","equip_status":"good"},
+  {"equip_id":7000,"equip_name":"network tester","equip_status":"good"},
+  {"equip_id":8000,"equip_name":"cutters","equip_status":"good"},
+  {"equip_id":9000,"equip_name":"rj45 cable","equip_status":"good"}
+]
