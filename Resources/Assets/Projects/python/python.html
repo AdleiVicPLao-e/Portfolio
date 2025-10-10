@@ -427,7 +427,6 @@
       ];
 
       // Render CSV as editable table
-      // Render CSV as editable table
       function renderTable() {
         const table = document.getElementById("csv-table");
         table.innerHTML = "";
@@ -440,7 +439,6 @@
         });
         table.appendChild(headerRow);
 
-        // Numeric columns
         const numericColumns = [
           "k",
           "d",
@@ -460,11 +458,9 @@
           "results",
         ];
 
-        // Double (float) columns
         const doubleColumns = ["fbtime", "fdtime", "heraldtime"];
 
         csvData.forEach((row, i) => {
-          // Add visual separator between Blue and Red teams
           if (i > 0 && row.side === "Red" && csvData[i - 1].side === "Blue") {
             let sep = document.createElement("tr");
             sep.classList.add("team-separator");
@@ -479,7 +475,10 @@
 
           Object.keys(row).forEach((col) => {
             const td = document.createElement("td");
-            td.contentEditable = true;
+
+            // Make "side" and "position" columns uneditable
+            const isEditable = col !== "side" && col !== "position";
+            td.contentEditable = isEditable;
             td.innerText = row[col];
 
             td.style.textAlign =
@@ -491,33 +490,37 @@
                 ? "monospace"
                 : "inherit";
 
-            td.oninput = () => {
-              let value = td.innerText.trim();
+            // Style locked columns (side + position)
+            if (!isEditable) {
+              td.style.backgroundColor = "#f0f0f0";
+              td.style.color = "#555";
+              td.style.cursor = "not-allowed";
+            }
 
-              // Handle numeric-only columns
-              if (numericColumns.includes(col)) {
-                value = value.replace(/[^0-9\-]/g, ""); // integers only
-                td.innerText = value;
-                csvData[i][col] = value === "" ? 0 : parseInt(value);
-              }
-              // Handle double (float) columns
-              else if (doubleColumns.includes(col)) {
-                value = value.replace(/[^0-9.\-]/g, ""); // allow decimals
-                td.innerText = value;
-                csvData[i][col] = value === "" ? 0.0 : parseFloat(value);
-              }
-              // Text columns
-              else {
-                csvData[i][col] = value;
-              }
+            // Handle editable columns
+            if (isEditable) {
+              td.oninput = () => {
+                let value = td.innerText.trim();
 
-              // Optional highlight when edited
-              td.style.backgroundColor = "#fff7d1";
-            };
+                if (numericColumns.includes(col)) {
+                  value = value.replace(/[^0-9\-]/g, "");
+                  td.innerText = value;
+                  csvData[i][col] = value === "" ? 0 : parseInt(value);
+                } else if (doubleColumns.includes(col)) {
+                  value = value.replace(/[^0-9.\-]/g, "");
+                  td.innerText = value;
+                  csvData[i][col] = value === "" ? 0.0 : parseFloat(value);
+                } else {
+                  csvData[i][col] = value;
+                }
 
-            td.onblur = () => {
-              td.style.backgroundColor = "";
-            };
+                td.style.backgroundColor = "#fff7d1";
+              };
+
+              td.onblur = () => {
+                td.style.backgroundColor = "";
+              };
+            }
 
             tr.appendChild(td);
           });
